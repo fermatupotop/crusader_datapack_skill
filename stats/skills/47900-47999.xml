@@ -2331,4 +2331,294 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="47974" toLevel="1" name="Effective Disarm">
+		<!-- Takes the enemy's weapon away for $s1 -->
+		<icon>icon.skill0794</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>DISARM</abnormalType>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<castRange>150</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-780</value>
+			<value level="3">-800</value>
+			<value level="4">-820</value>
+			<value level="5">-840</value>
+			<value level="6">-860</value>
+			<value level="7">-870</value>
+			<value level="8">-880</value>
+			<value level="9">-890</value>
+			<value level="10">-900</value>
+			<value level="11">-910</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
+			<value level="6">86</value>
+			<value level="7">87</value>
+			<value level="8">88</value>
+			<value level="9">89</value>
+			<value level="10">90</value>
+			<value level="11">91</value>
+		</magicLevel>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>50000</reuseDelay>
+		<trait>DISARM</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Disarm" />
+		</effects>
+	</skill>
+	<skill id="47975" toLevel="1" name="Powerful Disarm">
+		<icon>icon.skill0794</icon>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>485</existingSkillId> <!-- Disarm -->
+				<replacementSkillId>47974</replacementSkillId> <!-- Effective Disarm -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47976" toLevel="6" name="Soul Mark">
+		<icon>icon.s_soul_sign</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLevel>
+		<abnormalType>SOUL_MARK</abnormalType>
+		<abnormalTime>20</abnormalTime>
+		<activateRate>80</activateRate>
+		<castRange>150</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">82</value>
+			<value level="3">85</value>
+			<value level="4">88</value>
+			<value level="5">90</value>
+			<value level="6">91</value>
+		</magicLevel>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-820</value>
+			<value level="3">-850</value>
+			<value level="4">-880</value>
+			<value level="5">-900</value>
+			<value level="6">-910</value>
+		</effectPoint>
+		<reuseDelay>40000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="Op2hWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>ANCIENTSWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">4461</value>
+					<value level="2">4843</value>
+					<value level="3">5035</value>
+					<value level="4">5227</value>
+					<value level="5">5356</value>
+					<value level="6">5516</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<!-- + Need new handler for minus % (-95) from MpVampiricAttack -->
+		</effects>
+	</skill>
+	<skill id="47977" toLevel="1" name="Shock Impact">
+		<icon>icon.skill30526</icon>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>15</SHOCK>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<attackSkillId>45155</attackSkillId> <!-- Soul Impulse -->
+				<attackerType>Creature</attackerType>
+				<minDamage>100</minDamage>
+				<chance>30</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>47996</skillId> <!-- Shock Impact -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47985" toLevel="3" name="Death Pain">
+		<icon>icon.s_death_sign</icon>
+		<excludedFromCheck>true</excludedFromCheck>
+		<magicLevel>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+		</magicLevel>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">17</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<chance>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>47986</skillId> <!-- Death Pain Lv. 1 -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<chance>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>47986</skillId> <!-- Death Pain Lv. 1 -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47986" toLevel="5" name="Death Pain Lv. 1">
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<icon>icon.s_death_sign</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DEATH_MARK</abnormalType>
+		<abnormalVisualEffect>DEATH_MARK</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<effectPoint>
+			<value level="1">-655</value>
+			<value level="2">-655</value>
+			<value level="3">-655</value>
+		</effectPoint>
+		<hitTime>1200</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefencePhysicalSkillCriticalDamage">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANCIENTSWORD>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-10</value>
+				</ANCIENTSWORD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47996" toLevel="1" name="Shock Impact">
+		<icon>icon.skill30526</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<castRange>700</castRange>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-900</effectPoint>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
 </list>

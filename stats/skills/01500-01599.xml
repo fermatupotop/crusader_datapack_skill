@@ -593,29 +593,39 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1514" toLevel="2" name="Soul Barrier">
+	<skill id="1514" toLevel="3" name="Soul Guard">
 		<!-- Covers with a soul barrier. Bow Resistance $s1 M. Def. $s2 -->
 		<icon>icon.skill1514</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value level="1">30</value>
+			<value level="2">30</value>
+			<value level="2">60</value>
+		</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<hitTime>1000</hitTime>
 		<isMagic>0</isMagic>
 		<magicLevel>
 			<value level="1">58</value>
-			<value level="2">80</value>
+			<value level="2">76</value>
+			<value level="2">78</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">60</value>
+			<value level="2">100</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">600000</value>
+			<value level="2">300000</value>
+		</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -623,12 +633,27 @@
 				<BOW>
 					<value level="1">10</value>
 					<value level="2">30</value>
+					<value level="3">30</value>
 				</BOW>
+				<PISTOLS>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">30</value>
+				</PISTOLS>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value level="1">50</value>
 					<value level="2">100</value>
+					<value level="3">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

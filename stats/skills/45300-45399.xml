@@ -4296,7 +4296,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45366" toLevel="10" name="Amazing Soul Smash">
+	<skill id="45366" toLevel="15" name="Amazing Soul Smash">
 		<!-- Attacks the target twice with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill10013</icon>
 		<castRange>40</castRange>
@@ -4312,6 +4312,11 @@
 			<value level="8">-420</value>
 			<value level="9">-445</value>
 			<value level="10">-470</value>
+			<value level="11">-475</value>
+			<value level="12">-480</value>
+			<value level="13">-485</value>
+			<value level="14">-490</value>
+			<value level="15">-495</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1300</hitTime>
@@ -4326,6 +4331,11 @@
 			<value level="8">80</value>
 			<value level="9">85</value>
 			<value level="10">90</value>
+			<value level="11">91</value>
+			<value level="12">92</value>
+			<value level="13">93</value>
+			<value level="14">94</value>
+			<value level="15">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
@@ -4338,11 +4348,16 @@
 			<value level="8">63</value>
 			<value level="9">66</value>
 			<value level="10">70</value>
+			<value level="11">72</value>
+			<value level="12">74</value>
+			<value level="13">76</value>
+			<value level="14">78</value>
+			<value level="15">80</value>
 		</mpConsume>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -4366,10 +4381,20 @@
 					<value level="8">2475</value>
 					<value level="9">2643</value>
 					<value level="10">2812</value>
+					<value level="11">2896</value>
+					<value level="12">2982</value>
+					<value level="13">3071</value>
+					<value level="14">3163</value>
+					<value level="15">3257</value>
 				</power>
 				<pDefMod>0.85</pDefMod>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
+				<abnormalType>STUN</abnormalType>
+				<powerModifier>1.6</powerModifier>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>STUN,-10</dispel>
 			</effect>
 			<effect name="PhysicalAttack">
 				<power>
@@ -4383,12 +4408,21 @@
 					<value level="8">2475</value>
 					<value level="9">2643</value>
 					<value level="10">2812</value>
+					<value level="11">2896</value>
+					<value level="12">2982</value>
+					<value level="13">3071</value>
+					<value level="14">3163</value>
+					<value level="15">3257</value>
 				</power>
 				<pDefMod>0.85</pDefMod>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>10</criticalChance>
+				<criticalChance>15</criticalChance>
+				<abnormalType>STUN</abnormalType>
+				<powerModifier>1.6</powerModifier>
 			</effect>
-			<!-- TODO: A new effect is needed for this, "increased damage if the target is stunned". -->
+			<effect name="DispelBySlot">
+				<dispel>STUN,-10</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="45367" toLevel="1" name="Amazing Thunder Storm Mastery">
