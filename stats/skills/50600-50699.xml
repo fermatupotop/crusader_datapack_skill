@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+
+    <skill id="50606" toLevel="22" name="Galaxia's Justice">
+        <!-- Deals $s1 fixed damage. -->
+        <icon>icon.skill0000</icon>
+        <operateType>A1</operateType>
+        <castRange>700</castRange>
+        <effectPoint>-500</effectPoint>
+        <isTriggeredSkill>true</isTriggeredSkill>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="RealDamage">
+                <power>500</power>
+            </effect>
+        </effects>
+    </skill>
+
+    <skill id="50610" toLevel="22" name="Anais' Justice">
+        <!-- Deals $s1 fixed damage. -->
+        <icon>icon.skill0000</icon>
+        <operateType>A1</operateType>
+        <castRange>700</castRange>
+        <effectPoint>-500</effectPoint>
+        <isTriggeredSkill>true</isTriggeredSkill>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="RealDamage">
+                <power>500</power>
+            </effect>
+        </effects>
+    </skill>
+
+    <skill id="50614" toLevel="22" name="Anais' Justice">
+        <!-- Deals $s1 fixed damage. -->
+        <icon>icon.skill0000</icon>
+        <operateType>A1</operateType>
+        <castRange>700</castRange>
+        <effectPoint>-500</effectPoint>
+        <isTriggeredSkill>true</isTriggeredSkill>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="RealDamage">
+                <power>500</power>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="50618" toLevel="22" name="Juriel's Justice">
+        <!-- Deals $s1 fixed damage. -->
+        <icon>icon.skill0000</icon>
+        <operateType>A1</operateType>
+        <castRange>700</castRange>
+        <effectPoint>-500</effectPoint>
+        <isTriggeredSkill>true</isTriggeredSkill>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="RealDamage">
+                <power>500</power>
+            </effect>
+        </effects>
+    </skill>
+</list>

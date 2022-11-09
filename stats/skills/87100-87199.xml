@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="87101" toLevel="1" name="Amadeus">
+		<!-- A colorful flower springs up on the battlefield.\n\nFor $s1, the character gets\nMax HP $s2\nP. Atk. $s3\nP. Def. $s4\nM. Def. $s5\nReceived P. Skill Critical Rate $s6\nSpeed $s7\n\n<Use effect>\nFor $s8, the character and their allies get\nP. Atk. $s9\nM. Atk. $s10\nReceived P. Skill Critical Damage $s11\n\n<Skill upgrade>\nUltimate Defense → Ultimate Defense: Bard\nFrantic Pace → Rapid Frantic Pace\n\nWhen attacking with Rapid Frantic Pace,\nthere is a certain chance to deliver an <font color="FFBB00">additional blow</font>. -->
+		<icon>icon.s_amadeus_self</icon>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
+		<effectRange>600</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
+		<magicLevel>88</magicLevel>
+		<mpConsume>375</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>87102</skillId> <!-- Amadeus - C -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>110</existingSkillId> <!-- Ultimate Defense -->
+				<replacementSkillId>87150</replacementSkillId> <!-- Ultimate Defense: Bard -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>45402</existingSkillId> <!-- Frantic Pace -->
+				<replacementSkillId>87105</replacementSkillId> <!-- Rapid Frantic Pace: Sword Muse -->
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>87105</castSkillId> <!-- Rapid Frantic Pace: Sword Muse -->
+				<skillId>45402</skillId> <!-- Frantic Pace -->
+				<skillLevel>5</skillLevel>
+				<chance>30</chance>
+				<targetType>TARGET</targetType>
+			</effect>
+		</effects>
+	</skill>
+
+	<skill id="87102" toLevel="1" name="Amadeus - C">
+		<!-- P. Atk. $s1\nM. Atk. $s2\nReceived P. Skill Critical Rate $s3 -->
+		<effectPoint>900</effectPoint>
+		<affectRange>1000</affectRange>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
+		<abnormalTime>8</abnormalTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isMagic>1</isMagic>
+		<operateType>A2</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-2000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+
+	<skill id="87103" toLevel="1" name="Flamenco">
+<!-- A colorful flower springs up on the battlefield.\n\nFor $s1, the character gets\nMax HP $s2\nP. Atk. $s3\nP. Def. $s4\nM. Def. $s5\nReceived P. Skill Critical Rate $s6\nSpeed $s7\n\n<Use effect>\nFor $s8, the character and their allies get\nP. Atk. $s9\nM. Atk. $s10\nReceived P. Skill Critical Damage $s11\n\n<Skill upgrade>\nUltimate Defense → Ultimate Defense: Bard\nFrantic Pace → Rapid Frantic Pace\n\nWhen attacking with Rapid Frantic Pace,\nthere is a certain chance to deliver an <font color="FFBB00">additional blow</font>. -->
+	<icon>icon.s_flamenco_self</icon>
+	<abnormalLevel>3</abnormalLevel>
+	<abnormalTime>1200</abnormalTime>
+	<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
+	<effectRange>600</effectRange>
+	<hitTime>2000</hitTime>
+	<isMagic>1</isMagic>
+	<itemConsumeCount>50</itemConsumeCount>
+	<itemConsumeId>3031</itemConsumeId>
+	<magicLevel>88</magicLevel>
+	<mpConsume>375</mpConsume>
+	<mpInitialConsume>15</mpInitialConsume>
+	<operateType>A2</operateType>
+	<reuseDelay>60000</reuseDelay>
+	<basicProperty>NONE</basicProperty>
+	<magicCriticalRate>5</magicCriticalRate>
+	<targetType>SELF</targetType>
+	<affectScope>SINGLE</affectScope>
+	<effects>
+		<effect name="MaxHp">
+			<amount>1000</amount>
+			<mode>DIFF</mode>
+		</effect>
+		<effect name="PAtk">
+			<amount>1000</amount>
+			<mode>DIFF</mode>
+		</effect>
+		<effect name="PhysicalDefence">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+		</effect>
+		<effect name="MagicalDefence">
+			<amount>1000</amount>
+			<mode>DIFF</mode>
+		</effect>
+		<effect name="DefenceCriticalRate">
+			<amount>-5</amount>
+			<mode>PER</mode>
+		</effect>
+		<effect name="Speed">
+			<amount>15</amount>
+			<mode>DIFF</mode>
+		</effect>
+		<effect name="CallSkill">
+			<skillId>87104</skillId> <!-- Flamenco - C -->
+			<skillLevel>1</skillLevel>
+		</effect>
+		<effect name="ReplaceSkillBySkill">
+			<existingSkillId>110</existingSkillId> <!-- Ultimate Defense -->
+			<replacementSkillId>87150</replacementSkillId> <!-- Ultimate Defense: Bard -->
+		</effect>
+		<effect name="ReplaceSkillBySkill">
+			<existingSkillId>45402</existingSkillId> <!-- Frantic Pace -->
+			<replacementSkillId>87106</replacementSkillId> <!-- Rapid Frantic Pace -->
+		</effect>
+		<effect name="TriggerSkillBySkill">
+			<castSkillId>87106</castSkillId> <!-- Rapid Frantic Pace -->
+			<skillId>45402</skillId> <!-- Frantic Pace -->
+			<skillLevel>5</skillLevel>
+				<chance>30</chance>
+			<targetType>TARGET</targetType>
+		</effect>
+	</effects>
+</skill>
+
+
+	<skill id="87104" toLevel="1" name="Flamenco - C">
+		<!-- P. Atk. $s1\nM. Atk. $s2\nReceived P. Skill Critical Rate $s3 -->
+		<effectPoint>900</effectPoint>
+		<affectRange>1000</affectRange>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
+		<abnormalTime>8</abnormalTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isMagic>1</isMagic>
+		<operateType>A2</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+
+	<skill id="87105" toLevel="5" name="Rapid Frantic Pace: Sword Muse">
+		<!-- Attacks the enemy with $s1 power.\nThe skill's power $s2 if the target is inflicted with Hold.\n\nDeals damage to the target that is able, with a certain chance, to deliver an <font color="FFBB00">additional blow</font>;\nand applies Sword Muse's Stigma.\n\n<PvP effect>\nWhen the target who is already affected by Dancer's Stigma\ngets Sword Muse's Stigma applied by a Sword Muse,\nStigma Explosion is triggered, and it decreases the targets HP by 10%%.\n\nIgnores Shield Defense.\nIgnores $s3 of the target's defense.\nCritical. -->
+		<icon>icon.extreme_tempo</icon>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-430</value>
+			<value level="2">-440</value>
+			<value level="3">-450</value>
+			<value level="4">-460</value>
+			<value level="5">-470</value>
+		</effectPoint>
+		<magicLevel>80</magicLevel>
+		<mpConsume>
+			<value level="1">64</value>
+			<value level="2">66</value>
+			<value level="3">67</value>
+			<value level="4">69</value>
+			<value level="5">70</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<effectRange>400</effectRange>
+		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">6539</value>
+					<value level="2">6662</value>
+					<value level="3">6787</value>
+					<value level="4">6869</value>
+					<value level="5">7099</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+				<abnormalType>ROOT_PHYSICALLY;ROOT_MAGICALLY</abnormalType>
+				<damageModifier>1.5</damageModifier>
+			</effect>
+		</effects>
+		<pvpEffects>
+			<effect name="CallSkill">
+				<skillId>87109</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</pvpEffects>
+	</skill>
+
+	<skill id="87106" toLevel="5" name="Rapid Frantic Pace: Dancer">
+		<!-- Attacks the enemy with $s1 power.\nThe skill's power $s2 if the target is inflicted with Hold.\n\nDeals damage to the target that is able, with a certain chance, to deliver an <font color="FFBB00">additional blow</font>;\nand applies Sword Muse's Stigma.\n\n<PvP effect>\nWhen the target who is already affected by Dancer's Stigma\ngets Sword Muse's Stigma applied by a Sword Muse,\nStigma Explosion is triggered, and it decreases the targets HP by 10%%.\n\nIgnores Shield Defense.\nIgnores $s3 of the target's defense.\nCritical. -->
+		<icon>icon.extreme_tempo</icon>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-430</value>
+			<value level="2">-440</value>
+			<value level="3">-450</value>
+			<value level="4">-460</value>
+			<value level="5">-470</value>
+		</effectPoint>
+		<magicLevel>80</magicLevel>
+		<mpConsume>
+			<value level="1">64</value>
+			<value level="2">66</value>
+			<value level="3">67</value>
+			<value level="4">69</value>
+			<value level="5">70</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<effectRange>400</effectRange>
+		<reuseDelay>1000</reuseDelay>
+		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">6539</value>
+					<value level="2">6662</value>
+					<value level="3">6787</value>
+					<value level="4">6869</value>
+					<value level="5">7099</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+				<abnormalType>ROOT_PHYSICALLY;ROOT_MAGICALLY</abnormalType>
+				<damageModifier>1.5</damageModifier>
+			</effect>
+		</effects>
+		<pvpEffects>
+			<effect name="CallSkill">
+				<skillId>87110</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</pvpEffects>
+	</skill>
+
+
+
+	<skill id="87108" toLevel="1" name="Rapid Frantic Pace: Dancer">
+		<icon>icon.extreme_tempo</icon>
+		<operateType>A2</operateType>
+		<icon>icon.extreme_tempo</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>8</abnormalTime>
+	</skill>
+	<skill id="87109" toLevel="1" name="Sword Muse's Stigma">
+		<!-- A stigma that was applied by Sword Muse.\n\nP. Atk. $s1 -->
+		<icon>icon.extreme_tempo</icon>
+		<operateType>A2</operateType>
+		<icon>icon.extreme_tempo</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="87110" toLevel="1" name="Dancer's Stigma">
+		<icon>icon.extreme_tempo</icon>
+		<operateType>A2</operateType>
+		<icon>icon.extreme_tempo</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="PhysicalAttack">
+			<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+
+<skill id="87130" toLevel="12" name="Bard's Weapon Mastery">
+<icon>icon.s_bard_weapon_mastery</icon>
+	<magicLevel>
+		<value level="1">48</value>
+		<value level="2">58</value>
+		<value level="3">68</value>
+		<value level="4">78</value>
+		<value level="5">80</value>
+		<value level="6">82</value>
+		<value level="7">84</value>
+		<value level="8">85</value>
+		<value level="9">86</value>
+		<value level="10">87</value>
+		<value level="11">88</value>
+		<value level="12">89</value>
+	</magicLevel>
+	<operateType>P</operateType>
+	<effects>
+		<effect name="PAtk">
+			<amount>
+				<value level="1">335</value>
+				<value level="2">410</value>
+				<value level="3">560</value>
+				<value level="4">585</value>
+				<value level="5">610</value>
+				<value level="6">735</value>
+				<value level="7">760</value>
+				<value level="8">780</value>
+				<value level="9">795</value>
+				<value level="10">805</value>
+				<value level="11">810</value>
+				<value level="12">815</value>
+			</amount>
+			<mode>DIFF</mode>
+			<weaponType>
+				<item>DUAL</item>
+			</weaponType>
+		</effect>
+		<effect name="PAtk">
+			<amount>
+				<value level="1">325</value>
+				<value level="2">425</value>
+				<value level="3">600</value>
+				<value level="4">625</value>
+				<value level="5">650</value>
+				<value level="6">800</value>
+				<value level="7">825</value>
+				<value level="8">845</value>
+				<value level="9">860</value>
+				<value level="10">870</value>
+				<value level="11">875</value>
+				<value level="12">880</value>
+			</amount>
+			<mode>DIFF</mode>
+			<weaponType>
+				<item>SWORD</item>
+				<item>BLUNT</item>
+			</weaponType>
+		</effect>
+		<effect name="PAtk">
+			<amount>10</amount>
+			<mode>PER</mode>
+			<allowWeapons>ALL</allowWeapons>
+		</effect>
+			<effect name="AttackTrait">
+				<SHOCK>
+					<value level="1">15</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+					<value level="4">15</value>
+					<value level="5">15</value>
+					<value level="6">15</value>
+					<value level="7">15</value>
+					<value level="8">15</value>
+					<value level="9">15</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
+				</SHOCK>
+			</effect>
+	</effects>
+</skill>
+
+<skill id="87131" toLevel="12" name="Bard's Armor Mastery">
+<icon>icon.s_bard_armour_mastery</icon>
+	<magicLevel>
+		<value level="1">48</value>
+		<value level="2">58</value>
+		<value level="3">68</value>
+		<value level="4">78</value>
+		<value level="5">80</value>
+		<value level="6">82</value>
+		<value level="7">84</value>
+		<value level="8">85</value>
+		<value level="9">86</value>
+		<value level="10">87</value>
+		<value level="11">88</value>
+		<value level="12">89</value>
+	</magicLevel>
+	<operateType>P</operateType>
+	<effects>
+		<effect name="PhysicalDefence">
+			<amount>
+					<value level="1">200</value>
+					<value level="2">230</value>
+					<value level="3">250</value>
+					<value level="4">265</value>
+					<value level="5">285</value>
+					<value level="6">300</value>
+					<value level="7">310</value>
+					<value level="8">320</value>
+					<value level="9">320</value>
+					<value level="10">330</value>
+					<value level="11">335</value>
+					<value level="12">340</value>
+			</amount>
+			<mode>DIFF</mode>
+		</effect>
+				<effect name="MagicalDefence">
+			<amount>
+					<value level="1">130</value>
+					<value level="2">155</value>
+					<value level="3">165</value>
+					<value level="4">180</value>
+					<value level="5">190</value>
+					<value level="6">200</value>
+					<value level="7">210</value>
+					<value level="8">220</value>
+					<value level="9">225</value>
+					<value level="10">230</value>
+					<value level="11">235</value>
+					<value level="12">240</value>
+			</amount>
+			<mode>DIFF</mode>
+		</effect>
+			<effect name="DefenceTrait">
+				<BOW>40</BOW>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">20</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+					<value level="12">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="12">35</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<chance>60</chance>
+				<targetType>SELF</targetType>
+				<minDamage>100</minDamage>
+				<skillId>53007</skillId> <!-- Power Stance -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>4</skillLevelScaleTo>
+			</effect>
+	</effects>
+</skill>
+<skill id="87132" toLevel="14" name="Bard's Recovery Mastery">
+<icon>icon.s_bard_recovery_mastery</icon>
+	<magicLevel>
+		<value level="1">48</value>
+		<value level="2">58</value>
+		<value level="3">68</value>
+		<value level="4">78</value>
+		<value level="5">80</value>
+		<value level="6">82</value>
+		<value level="7">84</value>
+		<value level="8">85</value>
+		<value level="9">86</value>
+		<value level="10">87</value>
+		<value level="11">88</value>
+		<value level="12">89</value>
+		<value level="13">89</value>
+		<value level="14">90</value>
+	</magicLevel>
+	<operateType>P</operateType>
+	<magicCriticalRate>5</magicCriticalRate>
+	<effects>
+		<effect name="HpRegen">
+			<amount>
+				<value level="1">3</value>
+				<value level="2">4</value>
+				<value level="3">5.5</value>
+				<value level="4">6.5</value>
+				<value level="5">8</value>
+				<value level="6">9.25</value>
+				<value level="7">10.5</value>
+				<value level="8">11.75</value>
+				<value level="9">12.5</value>
+				<value level="10">13</value>
+				<value level="11">13.5</value>
+				<value level="12">14</value>
+				<value level="13">14.5</value>
+				<value level="14">15</value>
+			</amount>
+			<mode>DIFF</mode>
+		</effect>
+				<effect name="MpRegen">
+			<amount>
+				<value level="1">3.25</value>
+				<value level="2">3.5</value>
+				<value level="3">4</value>
+				<value level="4">4.5</value>
+				<value level="5">4.5</value>
+				<value level="6">4.7</value>
+				<value level="7">5.1</value>
+				<value level="8">5.15</value>
+				<value level="9">5.2</value>
+				<value level="10">5.25</value>
+				<value level="11">5.3</value>
+				<value level="12">5.35</value>
+				<value level="13">5.4</value>
+				<value level="14">5.45</value>
+			</amount>
+			<mode>DIFF</mode>
+		</effect>
+			<effect name="MpRegen">
+			<amount>10</amount>
+			<mode>PER</mode>
+			</effect>
+	</effects>
+</skill>
+
+	<skill id="87133" toLevel="2" name="Additional Strain">
+		<icon>icon.s_walkout</icon>
+		<abnormalLevel>
+			<value level="1">5</value>
+			<value level="2">6</value>
+		</abnormalLevel>
+		<abnormalTime>8000</abnormalTime>
+		<abnormalType>REUSE_DELAY_UP</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">-900</value>
+			<value level="2">-1000</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1200</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLevel>
+			<value level="1">88</value>
+			<value level="2">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">25</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Reuse">
+				<amount>200</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>200</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	
+	<skill id="87134" toLevel="2" name="Break">
+		<icon>icon.s_break</icon>
+		<abnormalLevel>
+			<value level="1">5</value>
+			<value level="2">6</value>
+		</abnormalLevel>
+			<abnormalTime>8000</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">-900</value>
+			<value level="2">-1000</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1200</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLevel>
+			<value level="1">88</value>
+			<value level="2">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">25</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">-740</value>
+					<value level="2">-800</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-740</value>
+					<value level="2">-800</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+<skill id="87150" toLevel="1" name="Ultimate Defense: Bard">
+		<!-- P. Def. $s1\nM. Def. $s2\nBuff Cancel Resistance $s3 -->
+		<icon>icon.s_flamenco_self </icon>
+		<abnormalLevel>3	</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>H_ULTIMATE_DEFENCE_B_AVE</abnormalVisualEffect>
+		<effectPoint>438</effectPoint>
+		<hitTime>1000</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLevel>83</magicLevel>
+		<mpConsume>33</mpConsume>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>2</itemConsumeCount>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1620</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>1800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-90</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+</list>

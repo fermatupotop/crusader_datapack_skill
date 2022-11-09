@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="97301" name="Gorde's Flame Spear" type="Weapon">
+		<set name="icon" val="weapon_r110_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="1659" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_sellable" val="true" />
+		<stats>
+			<stat type="pAtk">271</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="62003" level="1" /> <!-- Gorde's Hellfire -->
+			<skill id="50402" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Weapon Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Weapon Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Weapon Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Weapon Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+			<skill id="62003" level="2" type="ON_ENCHANT" type_value="5"/> <!-- +CON +DEX -->
+			<skill id="62003" level="3" type="ON_ENCHANT" type_value="6"/> <!-- +CON +DEX -->
+			<skill id="62003" level="4" type="ON_ENCHANT" type_value="7"/> <!-- +CON +DEX -->
+			<skill id="62003" level="5" type="ON_ENCHANT" type_value="8"/> <!-- +CON +DEX -->
+			<skill id="62003" level="6" type="ON_ENCHANT" type_value="9"/> <!-- +CON +DEX -->
+			<skill id="62003" level="7" type="ON_ENCHANT" type_value="10"/> <!-- +CON +DEX -->
+		</skills>
+	</item>
+
+	<item id="97302" name="Gorde's Flame Spear" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="weapon_r110_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="1659" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">271</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="50402" level="1" type="ON_BLESSING" /> <!-- Weapon Blessing Effect -->
+			<skill id="50412" level="1" type="ON_BLESSING" type_value="5" /> <!-- +5 Boss' Weapon Blessing Effect -->
+			<skill id="50413" level="1" type="ON_BLESSING" type_value="6" /> <!-- +6 Boss' Weapon Blessing Effect -->
+			<skill id="50414" level="1" type="ON_BLESSING" type_value="7" /> <!-- +7 Boss' Weapon Blessing Effect -->
+			<skill id="50415" level="1" type="ON_BLESSING" type_value="8" /> <!-- +8 Boss' Weapon Blessing Effect -->
+			<skill id="50416" level="1" type="ON_BLESSING" type_value="9" /> <!-- +9 Boss' Weapon Blessing Effect -->
+			<skill id="50417" level="1" type="ON_BLESSING" type_value="10" /> <!-- +10 Boss' Weapon Blessing Effect -->
+			<skill id="62003" level="1" type="ON_ENCHANT" type_value="5"/> <!-- +CON +DEX -->
+			<skill id="62003" level="2" type="ON_ENCHANT" type_value="6"/> <!-- +CON +DEX -->
+			<skill id="62003" level="3" type="ON_ENCHANT" type_value="7"/> <!-- +CON +DEX -->
+			<skill id="62003" level="4" type="ON_ENCHANT" type_value="8"/> <!-- +CON +DEX -->
+			<skill id="62003" level="5" type="ON_ENCHANT" type_value="9"/> <!-- +CON +DEX -->
+			<skill id="62003" level="6" type="ON_ENCHANT" type_value="10"/> <!-- +CON +DEX -->
+		</skills>
+	</item>
+
+	<item id="97318" name="Spellbook: Challenger" type="EtcItem">
+		<!-- A spellbook for learning the Challenger skill. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true"/>
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="97319" name="Spellbook: Blade Wave" type="EtcItem">
+		<!-- A spellbook for learning the Blade Wave skill. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true"/>
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="97320" name="Spellbook: Slashing Blades" type="EtcItem">
+		<!-- A spellbook for learning the Slashing Blades skill. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true"/>
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="97321" name="Spellbook: Blade Throw" type="EtcItem">
+		<!-- A spellbook for learning the Blade Throw skill. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true"/>
+		<set name="material" val="PAPER" />
+	</item>
+
+	<item id="97357" name="+2 ~ +5 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+
+	<item id="97357" name="+2 ~ +5 Dragon Belt Pack" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+
+	<item id="97380" name="Pet Book: Perfect Bite" type="EtcItem">
+		<!-- A book for learning the Perfect Bite skill. -->
+		<set name="icon" val="icon.etc_codex_of_giant_i02" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+</list>
