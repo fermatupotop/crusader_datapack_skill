@@ -1349,7 +1349,6 @@
 		<icon>icon.skill0329</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
 				<INFECTION>20</INFECTION>
@@ -1357,6 +1356,8 @@
 				<SLEEP>20</SLEEP>
 				<SHOCK>20</SHOCK>
 				<FEAR>20</FEAR>
+				<SILENCE>20</SILENCE>
+				<PARALYZE>20</PARALYZE>
 			</effect>
 		</effects>
 	</skill>
@@ -3992,25 +3993,11 @@
 		<reuseDelay>500</reuseDelay>
 		<abnormalVisualEffect>
 			<value level="1">KAMAEL_BLACK_TRANSFORM</value>
-			<value level="2">KAMAEL_BLACK_TRANSFORM;LONG_RAPIER_BLACK_AVE;BLACK_STANCE_AVE</value>
+			<value level="2">KAMAEL_BLACK_TRANSFORM_2;LONG_RAPIER_BLACK_AVE;BLACK_STANCE_AVE</value>
 		</abnormalVisualEffect>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<conditions>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>393</skillId> <!-- Absorb Light Souls -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>394</skillId> <!-- Absorb Shadow Souls -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>45151</skillId> <!-- Collect Light Souls -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>45152</skillId> <!-- Collect Shadow Souls -->
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="BlockAbnormalSlot">
 				<slot>TRANSFORM</slot>
@@ -4021,6 +4008,34 @@
 				<weaponType>
 					<item>RAPIER</item>
 				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">280</value>
+					<value level="2">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">80</value>
+					<value level="2">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">120</value>
+					<value level="2">250</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalSkillCriticalDamage">
 				<amount>
@@ -4064,30 +4079,33 @@
 				<targetType>ENEMY_ONLY</targetType>
 			</effect>
 			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
-				<existingSkillId>45155</existingSkillId>
-				<replacementSkillId>45156</replacementSkillId>
+				<existingSkillId>45155</existingSkillId> <!-- Soul Impulse -->
+				<replacementSkillId>45156</replacementSkillId> <!-- Ultimate Soul Impulse -->
 			</effect>
 			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
-				<existingSkillId>45157</existingSkillId>
-				<replacementSkillId>45158</replacementSkillId>
+				<existingSkillId>45157</existingSkillId> <!-- Enuma Elish -->
+				<replacementSkillId>45158</replacementSkillId> <!-- Ultimate Enuma Elish -->
 			</effect>
 			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
-				<existingSkillId>45161</existingSkillId>
-				<replacementSkillId>45162</replacementSkillId>
+				<existingSkillId>45161</existingSkillId> <!-- Soul Piercing -->
+				<replacementSkillId>45162</replacementSkillId> <!-- Ultimate Soul Piercing -->
 			</effect>
 			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
-				<existingSkillId>45163</existingSkillId>
-				<replacementSkillId>45164</replacementSkillId>
+				<existingSkillId>45163</existingSkillId> <!-- Soul Spark -->
+				<replacementSkillId>45164</replacementSkillId> <!-- Ultimate Soul Spark -->
 			</effect>
 			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
-				<existingSkillId>45168</existingSkillId>
-				<replacementSkillId>45169</replacementSkillId>
+				<existingSkillId>45168</existingSkillId> <!-- Twin Shot -->
+				<replacementSkillId>45169</replacementSkillId> <!-- Ultimate Twin Shot -->
 			</effect>
 			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
-				<existingSkillId>45170</existingSkillId>
-				<replacementSkillId>45171</replacementSkillId>
+				<existingSkillId>45170</existingSkillId> <!-- Multishot -->
+				<replacementSkillId>45171</replacementSkillId> <!-- Ultimate Multishot -->
 			</effect>
-		
+			<effect name="ReplaceSkillBySkill" fromLevel="2" toLevel="2">
+				<existingSkillId>47394</existingSkillId> <!-- Legendary Twin Shot -->
+				<replacementSkillId>47427</replacementSkillId> <!-- Ultimate Legendary Twin Shot -->
+			</effect>
 		</effects>
 	</skill>
 	<skill id="399" toLevel="10" name="Heavy Armor Mastery">

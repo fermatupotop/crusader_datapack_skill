@@ -4530,17 +4530,35 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45230" toLevel="10" name="Transcendent Twin Shot">
+	<skill id="45230" toLevel="15" name="Transcendent Twin Shot">
 		<!-- <Ultimate skill> Shoots 2 arrows. Attacks the enemy at the front twice with $s1 power. Critical. Ignores Shield Defense. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0507</icon>
 		<operateType>A1</operateType>
 		<castRange>700</castRange>
-		<effectRange>1400</effectRange>
-		<hitTime>3000</hitTime>
+		<effectRange>1200</effectRange>
+		<hitTime>2700</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>2000</reuseDelay>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<reuseDelay>
+			<value level="1">2000</value>
+			<value level="2">2000</value>
+			<value level="3">2000</value>
+			<value level="4">2000</value>
+			<value level="5">2000</value>
+			<value level="6">2000</value>
+			<value level="7">2000</value>
+			<value level="8">1500</value>
+			<value level="9">1500</value>
+			<value level="10">1500</value>
+			<value level="11">1500</value>
+			<value level="12">1500</value>
+			<value level="13">1500</value>
+			<value level="14">1500</value>
+			<value level="15">1500</value>
+		</reuseDelay>
 		<effectPoint>
 			<value level="1">-120</value>
 			<value level="2">-170</value>
@@ -4552,7 +4570,29 @@
 			<value level="8">-420</value>
 			<value level="9">-445</value>
 			<value level="10">-470</value>
+			<value level="11">-475</value>
+			<value level="12">-480</value>
+			<value level="13">-485</value>
+			<value level="14">-490</value>
+			<value level="15">-495</value>
 		</effectPoint>
+		<mpConsume>
+			<value level="1">19</value>
+			<value level="2">27</value>
+			<value level="3">34</value>
+			<value level="4">42</value>
+			<value level="5">50</value>
+			<value level="6">57</value>
+			<value level="7">61</value>
+			<value level="8">65</value>
+			<value level="9">69</value>
+			<value level="10">73</value>
+			<value level="11">73</value>
+			<value level="12">75</value>
+			<value level="13">77</value>
+			<value level="14">79</value>
+			<value level="15">81</value>
+		</mpConsume>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
@@ -4564,23 +4604,14 @@
 			<value level="8">80</value>
 			<value level="9">85</value>
 			<value level="10">90</value>
+			<value level="11">91</value>
+			<value level="12">92</value>
+			<value level="13">93</value>
+			<value level="14">94</value>
+			<value level="15">95</value>
 		</magicLevel>
-		<mpConsume>
-			<value level="1">21</value>
-			<value level="2">29</value>
-			<value level="3">38</value>
-			<value level="4">46</value>
-			<value level="5">55</value>
-			<value level="6">63</value>
-			<value level="7">67</value>
-			<value level="8">72</value>
-			<value level="9">76</value>
-			<value level="10">80</value>
-		</mpConsume>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>	
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4591,19 +4622,45 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">315</value>
-					<value level="2">455</value>
-					<value level="3">1001</value>
-					<value level="4">1616</value>
-					<value level="5">2256</value>
-					<value level="6">2917</value>
-					<value level="7">3255</value>
-					<value level="8">3533</value>
-					<value level="9">3812</value>
-					<value level="10">4096</value>
+					<value level="1">416</value>
+					<value level="2">601</value>
+					<value level="3">1321</value>
+					<value level="4">2133</value>
+					<value level="5">2978</value>
+					<value level="6">3851</value>
+					<value level="7">4297</value>
+					<value level="8">4664</value>
+					<value level="9">5033</value>
+					<value level="10">5407</value>
+					<value level="11">5569</value>
+					<value level="12">5736</value>
+					<value level="13">5908</value>
+					<value level="14">6085</value>
+					<value level="15">6267</value>
 				</power>
-				<overHit>true</overHit>
-				<criticalChance>25</criticalChance>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">416</value>
+					<value level="2">601</value>
+					<value level="3">1321</value>
+					<value level="4">2133</value>
+					<value level="5">2978</value>
+					<value level="6">3851</value>
+					<value level="7">4297</value>
+					<value level="8">4664</value>
+					<value level="9">5033</value>
+					<value level="10">5407</value>
+					<value level="11">5569</value>
+					<value level="12">5736</value>
+					<value level="13">5908</value>
+					<value level="14">6085</value>
+					<value level="15">6267</value>
+				</power>
+				<criticalChance>10</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
 	</skill>
@@ -6328,14 +6385,18 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45253" toLevel="3" name="Rush Impact">
+	<skill id="45253" toLevel="6" name="Effective Rush Impact">
 		<!-- <Shock skill> Rushes forward to attack enemies at the front with $s1 power. Stuns them for $s2 Can be used if the distance to the target is more than $s3. -->
 		<icon>icon.skill0793</icon>
 		<castRange>
 			<value level="1">500</value>
 			<value level="2">600</value>
 			<value level="3">700</value>
+			<value level="4">700</value>
+			<value level="5">700</value>
+			<value level="6">700</value>
 		</castRange>
+		<effectRange>1200</effectRange>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>1000</reuseDelay>
@@ -6343,37 +6404,39 @@
 			<value level="1">-600</value>
 			<value level="2">-700</value>
 			<value level="3">-800</value>
+			<value level="4">-850</value>
+			<value level="5">-900</value>
+			<value level="6">-910</value>
 		</effectPoint>
 		<mpConsume>
-			<value level="1">180</value>
-			<value level="2">190</value>
-			<value level="3">200</value>
+			<value level="1">40</value>
+			<value level="2">40</value>
+			<value level="3">45</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+			<value level="6">50</value>
 		</mpConsume>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-		</abnormalLevel>
+		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>60</activateRate>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>600</affectRange>
+		<affectRange>700</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<effectRange>800</effectRange>
-		<fanRange>0;0;600;60</fanRange>
+		<fanRange>0;0;700;40</fanRange>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">60</value>
 			<value level="2">70</value>
 			<value level="3">80</value>
+			<value level="4">85</value>
+			<value level="5">90</value>
+			<value level="6">91</value>
 		</magicLevel>
-		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -6386,28 +6449,48 @@
 			</condition>
 			<condition name="OpCheckCastRange">
 				<distance>
-					<value level="1">150</value>
-					<value level="2">120</value>
-					<value level="3">100</value>
+					<value level="1">130</value>
+					<value level="2">100</value>
+					<value level="3">80</value>
+					<value level="4">80</value>
+					<value level="5">80</value>
+					<value level="6">80</value>
 				</distance>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">1500</value>
-					<value level="2">2100</value>
-					<value level="3">2520</value>
+					<value level="1">1700</value>
+					<value level="2">2200</value>
+					<value level="3">2800</value>
+					<value level="4">4200</value>
+					<value level="5">5800</value>
+					<value level="6">7500</value>
 				</power>
+				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>35016</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45254" toLevel="1" name="Rush">
+	<skill id="45254" toLevel="4" name="Effective Rush Impact"> <!-- Used for 47995 Disability -->
 		<!-- Stuns making unable to move. -->
-		<operateType>DA1</operateType>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-10</value>
+					<value level="4">-10</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45255" toLevel="35" name="Freezing Strike">
 		<!-- Speed -$s1. -->
