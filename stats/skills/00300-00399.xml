@@ -1328,8 +1328,11 @@
 		<icon>icon.skill0328</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>20</amount>
 				<mode>DIFF</mode>
@@ -1338,9 +1341,37 @@
 				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>45253</castSkillId> <!-- Effective Rush Impact -->
+				<skillId>47995</skillId> <!-- Disability -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillLevelScaleTo>4</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>45251</castSkillId> <!-- Rush Impact -->
+				<skillId>47995</skillId> <!-- Disability -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillLevelScaleTo>4</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>1440</castSkillId> <!-- Soul Steal -->
+				<skillId>47997</skillId> <!-- Soul Harmony -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>47980</castSkillId> <!-- Soul Snatch -->
+				<skillId>47993</skillId> <!-- Soul Resonance -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>

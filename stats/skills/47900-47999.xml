@@ -2652,6 +2652,8 @@
 	<skill id="47976" toLevel="6" name="Soul Mark">
 		<icon>icon.s_soul_sign</icon>
 		<operateType>A2</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2735,6 +2737,181 @@
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>47996</skillId> <!-- Shock Impact -->
 				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47979" toLevel="1" name="Leopold">
+		<!-- Summons an ancient weapon, and attacks the enemy with powerful shot. After two magic attacks with $s1 power attacks trice and deals $s2 damage depending on P. Atk. -->
+		<icon>icon.s_leopold</icon>
+		<operateType>A1</operateType>
+		<basicProperty>MAGIC</basicProperty>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<magicLevel>76</magicLevel>
+		<effectPoint>-2500</effectPoint>
+		<mpConsume>500</mpConsume>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<affectRange>400</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>RAPIER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>500</power>
+			</effect>
+			<effect name="MagicalAttack">
+				<power>500</power>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>47992</skillId> <!-- Leopold -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="47980" toLevel="3" name="Soul Snatch">
+		<!-- <<font color="FF8000">Steal skill</font>> Deals magic damage with $s1 power. There is a certain chance to steal up to $s2 buffs from the enemy. Monsters' buffs cannot be stolen. Stacks the Soul Resonance effect with each steal attempt. <Soul Resonance> Increases P./ M. Atk. for 5 min. Lv. 1: P./ M. Atk. +200 Lv. 2: P./ M. Atk. +300 Lv. 3: P./ M. Atk. +400 Lv. 4: P./ M. Atk. +600 Lv. 5: P./ M. Atk. +800 -->
+		<icon>icon.skill0000</icon>
+		<castRange>700</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>
+			<value level="1">-500</value>
+			<value level="2">-600</value>
+			<value level="3">-700</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>1200</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>15</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLevel>
+			<value level="1">55</value>
+			<value level="2">70</value>
+			<value level="3">80</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">60</value>
+			<value level="3">70</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>RAPIER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttackRange">
+				<power>
+					<value level="1">100</value>
+					<value level="2">120</value>
+					<value level="3">150</value>
+				</power>
+			</effect>
+			<effect name="StealAbnormal">
+				<slot>BUFF</slot>
+				<rate>50</rate>
+				<max>3</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47981" toLevel="1" name="Fragarach">
+		<!-- A sword of light called Fragarach protects the character. When damage is taken, the sword of light counterattacks and deals damage to the attacking enemy. (Cooldown: 3 sec.) There is a certain chance to paralyze (with lightning) the counterattacked enemy for 3 sec. -->
+		<icon>icon.s_fragarach</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpConsume>100</mpConsume>
+		<magicLevel>76</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
+				<skillId>47982</skillId> <!-- Fragarach -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<chance>20</chance>
+				<targetType>ENEMY_ONLY</targetType>
+				<minDamage>1</minDamage>
+				<skillId>791</skillId> <!-- Lightning -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47982" toLevel="1" name="Fragarach">
+		<icon>icon.s_fragarach</icon>
+		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic> <!-- Magic Skill -->
+		<effectPoint>-1000</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>0.5</pAtkMod>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47983" toLevel="1" name="Lightning Tornado">
+		<!-- A lightning tornado rushes to the enemy when Soul Spark is used. <Lightning Tornado> M. Power: 190 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="TriggerSkillBySkillAttack">
+				<attackSkillId>45163</attackSkillId> <!-- Soul Spark -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>47984</skillId> <!-- Lightning Tornado -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47984" toLevel="1" name="Lightning Tornado">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-500</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>190</power>
 			</effect>
 		</effects>
 	</skill>
@@ -2922,6 +3099,193 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="47988" toLevel="1" name="Resonance">
+		<!-- <Skill upgrade> Soul Steal ? Soul Snatch <Upgrade effect> Adds magic damage. Increases the number stacks. -->
+		<icon>icon.skill1526</icon>
+		<operateType>P</operateType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1440</existingSkillId> <!-- Soul Steal -->
+				<replacementSkillId>47980</replacementSkillId> <!-- Soul Snatch -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47989" toLevel="1" name="Lightning Mastery">
+		<!-- Paralysis Atk. Rate +15% <Skill upgrade> Lightning ? Lightning Squall <Upgrade effect> Deals magic damage. -->
+		<icon>icon.s_lightning</icon>
+		<operateType>P</operateType>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="AttackTrait">
+				<PARALYZE>15</PARALYZE>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>791</existingSkillId> <!-- Lightning -->
+				<replacementSkillId>47990</replacementSkillId> <!-- Lightning Squall -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47990" toLevel="11" name="Lightning Squall">
+		<!-- <Paralyzing skill> The effect lasts for $s1 Inflicts Paralysis (lightning). Deals magic damage with $s2 power. -->
+		<icon>icon.s_lightning</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
+			<value level="6">86</value>
+			<value level="7">87</value>
+			<value level="8">88</value>
+			<value level="9">89</value>
+			<value level="10">90</value>
+			<value level="11">91</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">35</value>
+			<value level="3">40</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+			<value level="6">55</value>
+			<value level="7">60</value>
+			<value level="8">65</value>
+			<value level="9">70</value>
+			<value level="10">75</value>
+			<value level="11">85</value>
+		</mpConsume>
+		<reuseDelay>15000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">120</value>
+					<value level="2">125</value>
+					<value level="3">130</value>
+					<value level="4">135</value>
+					<value level="5">140</value>
+					<value level="6">145</value>
+					<value level="7">150</value>
+					<value level="8">155</value>
+					<value level="9">160</value>
+					<value level="10">165</value>
+					<value level="11">170</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47991</skillId> 
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47991" toLevel="11" name="Lightning Squall">
+		<!-- Makes unable to move because of the lightning strike. -->
+		<icon>icon.s_lightning</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-780</value>
+			<value level="3">-800</value>
+			<value level="4">-820</value>
+			<value level="5">-840</value>
+			<value level="6">-860</value>
+			<value level="7">-870</value>
+			<value level="8">-880</value>
+			<value level="9">-890</value>
+			<value level="10">-900</value>
+			<value level="11">-910</value>
+		</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A2</operateType>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="47992" toLevel="1" name="Leopold">
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<icon>icon.s_leopold</icon>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<effectPoint>-2500</effectPoint>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>2.0</pAtkMod>
+			</effect>
+			<effect name="PhysicalAttack">
+				<pAtkMod>2.0</pAtkMod>
+			</effect>
+			<effect name="PhysicalAttack">
+				<pAtkMod>2.0</pAtkMod>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47993" toLevel="5" name="Soul Resonance">
+		<!-- P. Atk. $s1 M. Atk. $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>300</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">300</value>
+					<value level="3">400</value>
+					<value level="4">600</value>
+					<value level="5">800</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">300</value>
+					<value level="3">400</value>
+					<value level="4">600</value>
+					<value level="5">800</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="47995" toLevel="4" name="Disability">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -2938,7 +3302,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TriggerSkillBySkill">
-				<castSkillId>45253</castSkillId> <!-- Effective Rush Impact -->
+				<castSkillId>45251</castSkillId> <!-- Rush Impact -->
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<skillId>45254</skillId> <!-- -% HP (Effective Rush Impact) -->
@@ -2984,6 +3348,32 @@
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47997" toLevel="3" name="Soul Harmony">
+		<!-- P. Atk. $s1 M. Atk. $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>300</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

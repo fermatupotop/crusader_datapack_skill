@@ -3489,7 +3489,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="791" toLevel="5" name="Lightning">
+	<skill id="791" toLevel="11" name="Lightning">
 		<!-- <Paralyzing Skill> The effect lasts for $s1 Paralyzes the enemy. -->
 		<icon>icon.skill0791</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -3497,17 +3497,24 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>50</activateRate>
-		<castRange>600</castRange>
+		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
 		<basicProperty>MAGIC</basicProperty>
-		<coolTime>720</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-460</value>
-			<value level="2">-470</value>
-			<value level="3">-480</value>
-			<value level="4">-490</value>
-			<value level="5">-500</value>
+			<value level="1">-760</value>
+			<value level="2">-780</value>
+			<value level="3">-800</value>
+			<value level="4">-820</value>
+			<value level="5">-840</value>
+			<value level="6">-860</value>
+			<value level="7">-870</value>
+			<value level="8">-880</value>
+			<value level="9">-890</value>
+			<value level="10">-900</value>
+			<value level="11">-910</value>
 		</effectPoint>
-		<hitTime>1080</hitTime>
+		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3517,6 +3524,12 @@
 			<value level="3">80</value>
 			<value level="4">82</value>
 			<value level="5">84</value>
+			<value level="6">86</value>
+			<value level="7">87</value>
+			<value level="8">88</value>
+			<value level="9">89</value>
+			<value level="10">90</value>
+			<value level="11">91</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">30</value>
@@ -3524,11 +3537,15 @@
 			<value level="3">40</value>
 			<value level="4">45</value>
 			<value level="5">50</value>
+			<value level="6">55</value>
+			<value level="7">60</value>
+			<value level="8">65</value>
+			<value level="9">70</value>
+			<value level="10">75</value>
+			<value level="11">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<soulMaxConsumeCount>5</soulMaxConsumeCount>
-		<magicCriticalRate>5</magicCriticalRate>
 		<trait>ANOMALY</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>

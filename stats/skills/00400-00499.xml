@@ -4332,8 +4332,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<activateRate>70</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
+		<isMagic>1</isMagic>
 		<castRange>150</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>

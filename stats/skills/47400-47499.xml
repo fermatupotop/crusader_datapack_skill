@@ -1780,7 +1780,7 @@
 		</effects>
 	</skill>
 	<skill id="47440" toLevel="1" name="Faery Shield">
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_mystic_shield</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>

@@ -711,12 +711,32 @@
 			<value level="10">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
+				<isCritical>true</isCritical>
 				<minDamage>10</minDamage>
-				<chance>50</chance>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>45165</skillId> <!-- Soul Strike -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<isCritical>false</isCritical>
+				<minDamage>10</minDamage>
+				<chance>20</chance>
 				<targetType>ENEMY</targetType>
 				<skillId>45165</skillId> <!-- Soul Strike -->
 				<skillLevel>
@@ -735,24 +755,6 @@
 			<effect name="TriggerSkillByMagicType">
 				<magicTypes>0</magicTypes>
 				<skillId>45166</skillId> <!-- Soul Strike -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">4</value>
-					<value level="5">5</value>
-					<value level="6">6</value>
-					<value level="7">7</value>
-					<value level="8">8</value>
-					<value level="9">9</value>
-					<value level="10">10</value>
-				</skillLevel>
-				<chance>20</chance>
-				<targetType>ENEMY</targetType>
-			</effect>
-			<effect name="TriggerSkillByMagicType">
-				<magicTypes>1</magicTypes>
-				<skillId>45167</skillId> <!-- Soul Strike -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
