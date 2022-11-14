@@ -264,7 +264,7 @@
 		<!-- The power of Shillien is granted. The effect lasts for 20 min. M. Atk. +15% -->
 		<icon>icon.skill1507</icon>
 		<abnormalLevel>5</abnormalLevel>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK_SPECIAL</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -2845,13 +2845,13 @@
 		<!-- Petrifies oneself for 5 sec. protecting from damage. -->
 		<icon>icon.skill1540</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>8</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<hitTime>1200</hitTime>
 		<magicLevel>79</magicLevel>
 		<operateType>A2</operateType>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>480000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
@@ -2920,25 +2920,26 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1542" toLevel="2" name="Counter Critical">
+	<skill id="1542" toLevel="3" name="Counter Critical">
 		<!-- The effect lasts for $s1 P. Def. -$s5 Received P. Critical Damage -$s2 When damage is taken: There is a certain chance P. Critical Damage +$s4 for $s3 -->
-		<icon>icon.skill1542</icon>
+		<icon>icon.protect_critical</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL</abnormalType>
-		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>20</itemConsumeCount>
+		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLevel>
 			<value level="1">76</value>
-			<value level="2">82</value>
+			<value level="2">80</value>
+			<value level="3">82</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">73</value>
 			<value level="2">81</value>
+			<value level="3">89</value>
 		</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
@@ -2949,27 +2950,33 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Counter Critical -->
+				<!-- Counter Critical (Perfect Abilities) -->
 				<attackerType>Creature</attackerType>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
-				<skillId>6059</skillId> <!-- Counter Critical -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>
-					<value level="1">-30</value>
-					<value level="2">-40</value>
-				</amount>
-				<mode>PER</mode>
+				<skillId>87014</skillId> <!-- Perfect Abilities -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-30</value>
-					<value level="2">-20</value>
+					<value level="1">100</value>
+					<value level="2">150</value>
+					<value level="3">300</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">500</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3459,16 +3466,11 @@
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<pveEffects>
+		<effects>
 			<effect name="MagicalAttack">
 				<power>199</power>
 			</effect>
-		</pveEffects>
-		<pvpEffects>
-			<effect name="MagicalAttack">
-				<power>141</power>
-			</effect>
-		</pvpEffects>
+		</effects>
 		<selfEffects>
 			<effect name="Mp">
 				<amount>29</amount>
@@ -3494,16 +3496,12 @@
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<pveEffects>
-			<effect name="MagicalAttack">
-				<power>302</power>
-			</effect>
-		</pveEffects>
-		<pvpEffects>
+		<effects>
 			<effect name="MagicalAttack">
 				<power>178</power>
 			</effect>
-		</pvpEffects>
+		</effects>
+
 		<selfEffects>
 			<effect name="Mp">
 				<amount>25</amount>
@@ -3736,38 +3734,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
-		<pveEffects>
-			<effect name="MagicalAttack">
-				<power>
-					<value level="1">57</value>
-					<value level="2">58</value>
-					<value level="3">60</value>
-					<value level="4">61</value>
-					<value level="5">63</value>
-					<value level="6">66</value>
-					<value level="7">68</value>
-					<value level="8">71</value>
-					<value level="9">74</value>
-					<value level="10">77</value>
-					<value level="11">79</value>
-					<value level="12">82</value>
-					<value level="13">89</value>
-					<value level="14">94</value>
-					<value level="15">100</value>
-					<value level="16">104</value>
-					<value level="17">110</value>
-					<value level="18">115</value>
-					<value level="19">139</value>
-					<value level="20">152</value>
-					<value level="21">166</value>
-					<value level="22">179</value>
-					<value level="23">193</value>
-					<value level="24">207</value>
-				</power>
-				<overHit>true</overHit>
-			</effect>
-		</pveEffects>
-		<pvpEffects>
+		<effects>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">57</value>
@@ -3797,7 +3764,8 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-		</pvpEffects>
+		</effects>
+
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
