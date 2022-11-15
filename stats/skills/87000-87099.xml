@@ -133,6 +133,7 @@
     </skill>
     <skill id="87002" toLevel="1" name="Crusader Transformation - Stat Increase">
         <icon>icon.skill0000</icon>
+        <operateType>A1</operateType>
     </skill>
     <skill id="87003" toLevel="1" name="Crusader's Blue Energy">
         <!-- Blue energy that was granted to crusaders. Makes the body tougher. For 10 sec. CON +1 MEN +1 All received Critical Rate -2% -->
@@ -374,6 +375,7 @@
         <castRange>400</castRange>
         <hitTime>1200</hitTime>
         <affectLimit>3-3</affectLimit>
+        <affectRange>200</affectRange>
         <magicLevel>
             <value level="1">76</value>
             <value level="2">77</value>
@@ -443,7 +445,7 @@
             <value level="20">80</value>
         </mpConsume>
         <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
+        <affectScope>RANGE</affectScope>
         <affectObject>NOT_FRIEND</affectObject>
         <effects>
             <effect name="PhysicalAttack">
@@ -1098,34 +1100,110 @@
     <skill id="87018" toLevel="20" name="Transcendent Fatal Crush">
         <!-- A powerful strike. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. The skill can only be used in transcendent instance zones. -->
         <icon>icon.skill0000</icon>
-        <operateType>P</operateType>
-        <magicLevel>76</magicLevel>
-        <magicCriticalRate>5</magicCriticalRate>
+        <operateType>A1</operateType>
+        <castRange>400</castRange>
+        <affectLimit>5-12</affectLimit>
+        <affectRange>300</affectRange>
+        <hitTime>1200</hitTime>
+        <magicLevel>
+            <value level="1">76</value>
+            <value level="2">77</value>
+            <value level="3">78</value>
+            <value level="4">79</value>
+            <value level="5">80</value>
+            <value level="6">81</value>
+            <value level="7">82</value>
+            <value level="8">83</value>
+            <value level="9">84</value>
+            <value level="10">85</value>
+            <value level="11">86</value>
+            <value level="12">87</value>
+            <value level="13">88</value>
+            <value level="14">89</value>
+            <value level="15">90</value>
+            <value level="16">91</value>
+            <value level="17">92</value>
+            <value level="18">93</value>
+            <value level="19">94</value>
+            <value level="20">95</value>
+        </magicLevel>
+        <coolTime>500</coolTime>
+        <reuseDelay>1000</reuseDelay>
+        <effectPoint>
+            <value level="1">-220</value>
+            <value level="2">-270</value>
+            <value level="3">-320</value>
+            <value level="4">-370</value>
+            <value level="5">-395</value>
+            <value level="6">-220</value>
+            <value level="7">-270</value>
+            <value level="8">-320</value>
+            <value level="9">-370</value>
+            <value level="10">-395</value>
+            <value level="11">-420</value>
+            <value level="12">-470</value>
+            <value level="13">-520</value>
+            <value level="14">-570</value>
+            <value level="15">-595</value>
+            <value level="16">-620</value>
+            <value level="17">-670</value>
+            <value level="18">-720</value>
+            <value level="19">-870</value>
+            <value level="20">-920</value>
+        </effectPoint>
+        <mpConsume>
+            <value level="1">60</value>
+            <value level="2">60</value>
+            <value level="3">61</value>
+            <value level="4">62</value>
+            <value level="5">63</value>
+            <value level="6">63</value>
+            <value level="7">64</value>
+            <value level="8">65</value>
+            <value level="9">66</value>
+            <value level="10">66</value>
+            <value level="11">67</value>
+            <value level="12">68</value>
+            <value level="13">69</value>
+            <value level="14">69</value>
+            <value level="15">70</value>
+            <value level="16">72</value>
+            <value level="17">74</value>
+            <value level="18">76</value>
+            <value level="19">78</value>
+            <value level="20">80</value>
+        </mpConsume>
+        <targetType>ENEMY</targetType>
+        <affectScope>RANGE</affectScope>
+        <affectObject>NOT_FRIEND</affectObject>
         <effects>
-            <effect name="StatMulForBaseStat">
-                <baseStat>INT</baseStat>
-                <min>65</min>
-                <max>77</max>
-                <mulStat>PHYSICAL_ATTACK</mulStat>
-                <amount>200</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="StatMulForBaseStat">
-                <baseStat>INT</baseStat>
-                <min>78</min>
-                <max>90</max>
-                <mulStat>PHYSICAL_ATTACK</mulStat>
-                <amount>1000</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="StatMulForBaseStat">
-                <baseStat>INT</baseStat>
-                <min>91</min>
-                <max>100</max>
-                <mulStat>PHYSICAL_ATTACK</mulStat>
-                <amount>3000</amount>
-                <mode>PER</mode>
-                <mode>DIFF</mode>
+            <effect name="PhysicalAttack">
+                <power>
+                    <value level="1">6246</value>
+                    <value level="2">6334</value>
+                    <value level="3">6424</value>
+                    <value level="4">6513</value>
+                    <value level="5">6601</value>
+                    <value level="6">6691</value>
+                    <value level="7">6781</value>
+                    <value level="8">6870</value>
+                    <value level="9">6960</value>
+                    <value level="10">7049</value>
+                    <value level="11">7139</value>
+                    <value level="12">7229</value>
+                    <value level="13">7318</value>
+                    <value level="14">7409</value>
+                    <value level="15">7499</value>
+                    <value level="16">8249</value>
+                    <value level="17">9074</value>
+                    <value level="18">9981</value>
+                    <value level="19">10081</value>
+                    <value level="20">10181</value>
+                </power>
+                <criticalChance>15</criticalChance>
+                <ignoreShieldDefence>true</ignoreShieldDefence>
+                <pDefMod>0.8</pDefMod>
+                <overHit>true</overHit>
             </effect>
         </effects>
     </skill>
@@ -1241,7 +1319,36 @@
     <skill id="87023" toLevel="1" name="Power of Intelligence">
         <!-- Increases P. Atk. according to INT. <INT 65 - 77> P. Atk. +200 <INT 78 - 90> P. Atk. +1000 <INT 91+> P. Atk. +3000 -->
         <icon>icon.skill0000</icon>
-        <operateType>A1</operateType>
+        <operateType>P</operateType>
+        <magicLevel>76</magicLevel>
+        <magicCriticalRate>5</magicCriticalRate>
+        <effects>
+            <effect name="StatMulForBaseStat">
+                <baseStat>INT</baseStat>
+                <min>65</min>
+                <max>77</max>
+                <mulStat>PHYSICAL_ATTACK</mulStat>
+                <amount>200</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="StatMulForBaseStat">
+                <baseStat>INT</baseStat>
+                <min>78</min>
+                <max>90</max>
+                <mulStat>PHYSICAL_ATTACK</mulStat>
+                <amount>1000</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="StatMulForBaseStat">
+                <baseStat>INT</baseStat>
+                <min>91</min>
+                <max>100</max>
+                <mulStat>PHYSICAL_ATTACK</mulStat>
+                <amount>3000</amount>
+                <mode>PER</mode>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
     </skill>
     <skill id="87024" toLevel="1" name="Power of Intelligence Lv. 1">
         <!-- <INT 65 - 77> P. Atk. +200 -->
