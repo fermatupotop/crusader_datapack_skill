@@ -1341,37 +1341,24 @@
 	</skill>
 	
 	<skill id="47940" toLevel="1" name="Great Sweep">
-		<!-- <Shock/ knockback skill> Swings the spear to attack all enemies in front of the character with $S1 power. Knock the enemies back and stuns them for $S2 sec.. -->
+		<!-- <Shock/ knockback skill> Swings the spear to attack all enemies in front of the character with $s1 power. Knock the enemies back and stuns them for $s2. For 5 sec. Speed buffs are blocked. Gap-closing skills cannot be used. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. The knockback effect is available only in PvP. -->
 		<icon>icon.s_wide_sweep</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<castRange>200</castRange>
 		<coolTime>500</coolTime>
-		<effectPoint>
-			<value level="1">-1800</value>
-		</effectPoint>
+		<effectPoint>-1800</effectPoint>
 		<affectRange>200</affectRange>
-		<affectLimit>5-10</affectLimit>
+		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;200;180</fanRange>
-		<effectRange>400</effectRange>
-		<hitTime>2500</hitTime>
-		<magicLevel>
-			<value level="1">86</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">123</value>
-		</mpConsume>
+		<effectRange>600</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLevel>76</magicLevel>
+		<mpConsume>123</mpConsume>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>50</itemConsumeCount>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<pvpEffects>
-			<effect name="KnockBack"/>
-		</pvpEffects>
 		<reuseDelay>60000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1382,61 +1369,58 @@
 				</weaponType>
 			</condition>
 		</conditions>
+		<pvpEffects>
+			<effect name="CallSkill">
+				<skillId>47940</skillId> <!-- KnockDown (Great Sweep) -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</pvpEffects>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">12500</value>
-				</power>
+				<power>12500</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.9</pDefMod>
+				<pDefMod>0.7</pDefMod>
 				<criticalChance>15</criticalChance>
-			</effect>
-			<effect name="DispelBySlotProbability">
-				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP;SPEED_UP_SPECIAL;SONG_OF_WIND</dispel>
-				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>47962</skillId> <!-- Stun (Great Sweep) -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>47968</skillId> <!-- Disable Gam-Glosing Skills (Great Sweep) -->
+				<skillId>47968</skillId> <!-- Disable gap-closing skills (Great Sweep) -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="47941" toLevel="3" name="Spear Cage">
-		<!-- <Shock skill> Attacks nearby enemies with $s1 power. Stuns for $s2 P. Def. $s3 M. Def. $s4 Ignores Shield Defense. Critical. -->
+		<!-- <Hold skill with fixed cooldown> Throws the spear to the enemies around the target. Attacks them with $s1 power, and hold them for $s2 For $s3 P./ M. Def. $s4. Ignores Shield Defense. Ignores $s5 of the target's defense. Critical. -->
 		<icon>icon.s_spear_prison</icon>
 		<castRange>600</castRange>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<effectRange>1000</effectRange>
-		<hitTime>1300</hitTime>
+		<isMagic>0</isMagic>
+		<castRange>600</castRange>
+		<effectRange>1200</effectRange>
+		<coolTime>300</coolTime>
+		<hitTime>1000</hitTime>
 		<effectPoint>
-			<value level="1">-1175</value>
-			<value level="2">-1220</value>
-			<value level="3">-1265</value>
+			<value level="1">-1000</value>
+			<value level="2">-1100</value>
+			<value level="3">-1200</value>
 		</effectPoint>
-		<hpConsume>
-			<value level="1">-507</value>
-			<value level="2">-558</value>
-			<value level="3">-609</value>
-		</hpConsume>
 		<magicLevel>
-			<value level="1">77</value>
-			<value level="2">80</value>
-			<value level="3">83</value>
+			<value level="1">76</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">90</value>
-			<value level="2">94</value>
-			<value level="3">97</value>
+			<value level="1">120</value>
+			<value level="2">125</value>
+			<value level="3">130</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1456,8 +1440,7 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>20</criticalChance>
-				<pDefMod>0.95</pDefMod>
-				<overHit>true</overHit>
+				<pDefMod>0.9</pDefMod>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>47963</skillId> <!-- Spear Cage - Imprison -->
@@ -1478,27 +1461,32 @@
 		</effects>
 	</skill>
 	<skill id="47942" toLevel="6" name="Spear Rumble">
-		<!-- Attacks nearby enemies with $s1 power.\n\nRemoves Speed buffs.\nFor $s2 P. Atk. $s3\nP. Skill Critical Damage $s4\n\nIgnores Shield Defense.\nIgnores $s5 of the target's defense.\nCritical. -->
+		<!-- Attacks nearby enemies with $s1 power. Removes Speed buffs. For $s2 P. Atk. $s3 P. Skill Critical Damage $s4 Ignores Shield Defense. Ignores $s5 of the target's defense. Critical. -->
 		<icon>icon.s_spear_stump</icon>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
-		<coolTime>733</coolTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<effectPoint>
-			<value level="1">-560</value>
-			<value level="2">-575</value>
-			<value level="3">-590</value>
-			<value level="4">-605</value>
-			<value level="5">-620</value>
-			<value level="6">-635</value>
+			<value level="1">-1190</value>
+			<value level="2">-1200</value>
+			<value level="3">-1210</value>
+			<value level="4">-1220</value>
+			<value level="5">-1230</value>
+			<value level="6">-1240</value>
 		</effectPoint>
-		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
 		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">40</value>
-			<value level="3">40</value>
-			<value level="4">40</value>
-			<value level="5">40</value>
-			<value level="6">41</value>
+			<value level="1">76</value>
+			<value level="2">82</value>
+			<value level="3">84</value>
+			<value level="4">86</value>
+			<value level="5">88</value>
+			<value level="6">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">100</value>
@@ -1510,7 +1498,9 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<trait>ANOMALY</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1532,15 +1522,14 @@
 					<value level="6">4656</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.95</pDefMod>
+				<pDefMod>0.85</pDefMod>
 				<criticalChance>15</criticalChance>
-				<overHit>true</overHit>
 			</effect>
 			<effect name="DispelBySlotProbability">
-			<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP;SPEED_UP_SPECIAL;SONG_OF_WIND</dispel>
-			<rate>100</rate>
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP;SPEED_UP_SPECIAL;SONG_OF_WIND</dispel>
+				<rate>100</rate>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PAtk">
 				<amount>
 					<value fromLevel="1" toLevel="3">-30</value>
 					<value fromLevel="4" toLevel="6">-40</value>
@@ -1554,31 +1543,27 @@
 		</effects>
 	</skill>
 	<skill id="47943" toLevel="3" name="Unleashed Power">
-		<!-- Enhances physical abilities.\n\nTemporarily received damage $s1\nShock Atk. Rate $s2\nP. Skill Power $s3 -->
+		<!-- Enhances physical abilities. Temporarily received damage $s1 Shock Atk. Rate $s2 P. Skill Power $s3 -->
 		<icon>icon.s_surge</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
-		<effectRange>600</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">76</value>
-			<value level="2">82</value>
-			<value level="3">88</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
 			<value level="2">65</value>
 			<value level="3">70</value>
 		</mpConsume>
-		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1590,58 +1575,38 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceTrait">
+			<effect name="AttackTrait">
 				<SHOCK>
 					<value level="1">5</value>
 					<value level="2">7</value>
 					<value level="3">10</value>
 				</SHOCK>
 			</effect>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
+			<effect name="DamageByAttack">						   
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-4</value>
+					<value level="3">-5</value>
+				</amount>
+				<type>ENEMY_ALL</type>
 			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveRaidMagicalSkillDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveRaidPhysicalAttackDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveRaidPhysicalSkillDefenceBonus">
-				<amount>4</amount>
-				<mode>PER</mode>
+			<effect name="DamageByAttack">						   
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-4</value>
+					<value level="3">-5</value>
+				</amount>
+				<type>PK</type>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="47944" toLevel="2" name="Anger">
+		<!-- Unleashes suppressed anger and attacks nearby enemies. Anger is charging level by level when basic attacks and attack skills are used. (Charge cooldown: 3 sec.) Once Anger is charged to Lv. 5 an attack triggers an additional attack to nearby enemies. -->
 		<icon>icon.s_sword_art5</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
-			<value level="1">46</value>
-			<value level="2">49</value>
+			<value level="1">40</value>
+			<value level="2">80</value>
 		</magicLevel>
 		<effects>
 			<effect name="PAtk">
@@ -1651,8 +1616,139 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>POLE</allowWeapons>
+				<skillId>47945</skillId> <!-- Anger Lv. 1 -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>POLE</allowWeapons>
+				<skillId>47945</skillId> <!-- Anger Lv. 1 -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>POLE</allowWeapons>
+				<skillId>47948</skillId> <!-- Anger Lv. 1 -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>POLE</allowWeapons>
+				<skillId>47948</skillId> <!-- Anger Lv. 1 -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
 		</effects>
 	</skill>
+	<skill id="47945" toLevel="5" name="Anger Lv. 1">
+		<!-- Anger charge has reached Lv. 1. Use basic attacks and attack skills to charge Anger to the next level. -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalType>ANGER</abnormalType>
+		<abnormalTime>10</abnormalTime>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallSkill" fromLevel="5" toLevel="5">
+				<skillId>47946</skillId> <!-- Anger Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47946" toLevel="1" name="Anger Attack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<effectPoint>-210</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectRange>400</effectRange>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>0.5</pAtkMod>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47948" toLevel="5" name="Anger Lv. 1">
+		<!-- Anger charge has reached Lv. 1. Use basic attacks and attack skills to charge Anger to the next level. -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalType>ANGER</abnormalType>
+		<abnormalTime>10</abnormalTime>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallSkill" fromLevel="5" toLevel="5">
+				<skillId>47949</skillId> <!-- Anger Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47949" toLevel="1" name="Anger Attack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<effectPoint>-210</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectRange>400</effectRange>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>1.0</pAtkMod>
+			</effect>
+		</effects>
 	<skill id="47951" toLevel="13" name="Dual Sword Mastery">
 		<!-- When using dual swords P. Atk. +$s1 ; Attack Speed + $s2 -->
 		<icon>icon.skill0144</icon>
@@ -1858,7 +1954,32 @@
 			</effect>
 		</effects>
 	</skill>
-
+	<skill id="47960" toLevel="1" name="Great Sweep">
+		<icon>icon.skill0000</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<activateRate>60</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<effectPoint>-210</effectPoint>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="KnockBack">
+				<distance>100</distance>
+				<speed>300</speed>
+				<knockDown>true</knockDown>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="47962" toLevel="1" name="Great Sweep">
 		<!-- Cannot move due to shock. -->
 		<icon>icon.s_wide_sweep</icon>
@@ -1868,26 +1989,17 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<effectPoint>
-			<value level="1">-590</value>
-		</effectPoint>
+		<isMagic>0</isMagic>
+		<effectPoint>-210</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<reuseDelay>6000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SHOCK</trait>
+		<lvlBonusRate>20</lvlBonusRate>
 		<targetType>ENEMY</targetType>
-		<affectScope>FAN</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>POLE</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
@@ -1895,18 +2007,22 @@
 		</effects>
 	</skill>
 	<skill id="47968" toLevel="1" name="Great Sweep">
-		<!-- Speed buffs are disabled.\nGap-closing skills cannot be used -->
+		<!-- Speed buffs are disabled. Gap-closing skills cannot be used. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
-		<effectRange>1200</effectRange>
 		<abnormalTime>5</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<basicProperty>NONE</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isDebuff>true</isDebuff>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP;SPEED_UP_SPECIAL;SONG_OF_WIND</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_SPEED_AVOID_UP;SPEED_UP;SPEED_UP_SPECIAL;SONG_OF_WIND</slot>
+			</effect>
 			<effect name="DisableSkill">
 				<disable>994;45159;45252;45253;47822;47824</disable>
 			</effect>
@@ -2069,29 +2185,23 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>500</castRange>
-		<effectRange>1000</effectRange>
+		<effectRange>1200</effectRange>
 		<effectPoint>
-			<value level="1">-1175</value>
-			<value level="2">-1220</value>
-			<value level="3">-1265</value>
+			<value level="1">-1000</value>
+			<value level="2">-1100</value>
+			<value level="3">-1200</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<trait>IMPRISON</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TargetCancel">
 				<chance>60</chance>
 			</effect>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="47965" toLevel="40" name="Challenger Triple Sonic Slash">
@@ -2292,34 +2402,24 @@
 		</effects>
 	</skill>
 	<skill id="47967" toLevel="3" name="Spear Cage">
-		<!-- P. Def. $s1\nM. Def. $s1 -->
+		<!-- P. Def. $s1 M. Def. $s1 -->
 		<icon>icon.skill1564</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_MD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>500</castRange>
-		<effectRange>1000</effectRange>
+		<effectRange>1200</effectRange>
 		<effectPoint>
-			<value level="1">-1175</value>
-			<value level="2">-1220</value>
-			<value level="3">-1265</value>
+			<value level="1">-1000</value>
+			<value level="2">-1100</value>
+			<value level="3">-1200</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<reuseDelay>
-			<value level="1">60000</value>
-			<value level="2">0</value>
-			<value level="3">0</value>
-		</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<trait>ANOMALY</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>-30</amount>
