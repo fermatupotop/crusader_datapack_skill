@@ -1814,6 +1814,155 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="47952" toLevel="13" name="Light Armor Mastery">
+		<!-- When using light armor: P. Def. $s1 M. Def. $s3 P. Evasion $s2 MP Recovery Rate $s4 -->
+		<icon>icon.skill0227</icon>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">76</value>
+			<value level="6">78</value>
+			<value level="7">80</value>
+			<value level="8">82</value>
+			<value level="9">84</value>
+			<value level="10">86</value>
+			<value level="11">88</value>
+			<value level="12">89</value>
+			<value level="13">90</value>
+		</magicLevel>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">135</value>
+					<value level="2">150</value>
+					<value level="3">170</value>
+					<value level="4">190</value>
+					<value level="5">200</value>
+					<value level="6">210</value>
+					<value level="7">230</value>
+					<value level="8">240</value>
+					<value level="9">250</value>
+					<value level="10">260</value>
+					<value level="11">270</value>
+					<value level="12">280</value>
+					<value level="13">300</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">63</value>
+					<value level="3">66</value>
+					<value level="4">69</value>
+					<value level="5">72</value>
+					<value level="6">75</value>
+					<value level="7">78</value>
+					<value level="8">81</value>
+					<value level="9">84</value>
+					<value level="10">87</value>
+					<value level="11">90</value>
+					<value level="12">95</value>
+					<value level="13">100</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="47953" toLevel="13" name="Heavy Armor Mastery">
+		<!-- When using heavy armor: P. Def. $s1 M. Def. $s2 MP Recovery Rate $s3 -->
+		<icon>icon.skill0231</icon>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">76</value>
+			<value level="6">78</value>
+			<value level="7">80</value>
+			<value level="8">82</value>
+			<value level="9">84</value>
+			<value level="10">86</value>
+			<value level="11">88</value>
+			<value level="12">89</value>
+			<value level="13">90</value>
+		</magicLevel>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">135</value>
+					<value level="2">150</value>
+					<value level="3">170</value>
+					<value level="4">190</value>
+					<value level="5">220</value>
+					<value level="6">230</value>
+					<value level="7">240</value>
+					<value level="8">250</value>
+					<value level="9">260</value>
+					<value level="10">270</value>
+					<value level="11">280</value>
+					<value level="12">290</value>
+					<value level="13">310</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">63</value>
+					<value level="3">66</value>
+					<value level="4">69</value>
+					<value level="5">72</value>
+					<value level="6">75</value>
+					<value level="7">78</value>
+					<value level="8">81</value>
+					<value level="9">84</value>
+					<value level="10">87</value>
+					<value level="11">90</value>
+					<value level="12">95</value>
+					<value level="13">100</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="47954" toLevel="8" name="Recovery Mastery">
 		<icon>icon.skill11003</icon>
 		<magicLevel>
