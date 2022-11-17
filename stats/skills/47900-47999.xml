@@ -2160,6 +2160,26 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>47939</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>47939</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="TriggerSkillBySkillAttack">
 				<attackSkillId>1</attackSkillId> <!-- Rising Attack -->
 				<attackerType>Creature</attackerType>
@@ -2335,11 +2355,51 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<abnormalType>SWORD_SPIRIT</abnormalType>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalLevel>5</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>47935</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>47935</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>47938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>47938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="TriggerSkillBySkillAttack" fromLevel="1" toLevel="1">
 				<attackSkillId>1</attackSkillId> <!-- Rising Attack -->
 				<attackerType>Creature</attackerType>
@@ -2560,6 +2620,7 @@
 				<skillLevel>1</skillLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<reuseDelay>3000</reuseDelay>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
@@ -2567,11 +2628,12 @@
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
-				<allowWeapons>POLE</allowWeapons>
+				<allowWeapons>DUAL</allowWeapons>
 				<skillId>47934</skillId> <!-- Sword Spirit Lv. 1 -->
 				<skillLevel>1</skillLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<reuseDelay>3000</reuseDelay>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
@@ -2579,11 +2641,12 @@
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
-				<allowWeapons>POLE</allowWeapons>
+				<allowWeapons>DUAL</allowWeapons>
 				<skillId>47937</skillId> <!-- Sword Spirit Lv. 1 -->
 				<skillLevel>1</skillLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<reuseDelay>3000</reuseDelay>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
@@ -2591,11 +2654,12 @@
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
-				<allowWeapons>POLE</allowWeapons>
+				<allowWeapons>DUAL</allowWeapons>
 				<skillId>47937</skillId> <!-- Sword Spirit Lv. 1 -->
 				<skillLevel>1</skillLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<reuseDelay>3000</reuseDelay>
 			</effect>
 		</effects>
 	</skill>
@@ -2605,7 +2669,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<abnormalType>SWORD_SPIRIT</abnormalType>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2632,8 +2696,11 @@
 		<effectRange>400</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>9000</reuseDelay>
-		<staticReuse>true</staticReuse>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SWORD_SPIRIT,5</dispel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>0.5</pAtkMod>
@@ -2673,8 +2740,11 @@
 		<effectRange>400</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>9000</reuseDelay>
-		<staticReuse>true</staticReuse>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SWORD_SPIRIT,5</dispel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.0</pAtkMod>
