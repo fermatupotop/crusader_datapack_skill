@@ -907,9 +907,43 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47417" toLevel="1" name="Dexterous Body">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_agile</icon>
+		<operateType>P</operateType>
+		<magicLevel>76</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>65</min>
+				<max>74</max>
+				<mulStat>PHYSICAL_ATTACK</mulStat>
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>75</min>
+				<max>84</max>
+				<mulStat>PHYSICAL_ATTACK</mulStat>
+				<amount>10</amount>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>75</min>
+				<max>84</max>
+				<mulStat>DEFENCE_CRITICAL_DAMAGE_ADD</mulStat>
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>75</min>
+				<max>84</max>
+				<mulStat>DEFENCE_CRITICAL_RATE_ADD</mulStat>
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47418" toLevel="1" name="Dexterous Body">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -1102,7 +1136,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="47427" toLevel="15" name="Ultimate Legendary Twin Shot">
+	<skill id="47427" toLevel="10" name="Ultimate Legendary Twin Shot">
 		<icon>icon.s_multi_shot_ka</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1780,7 +1814,7 @@
 		</effects>
 	</skill>
 	<skill id="47440" toLevel="1" name="Faery Shield">
-		<icon>icon.s_mystic_shield</icon>
+		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
@@ -2188,6 +2222,10 @@
 	<skill id="47454" toLevel="2" name="Magic Circle">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">80</value>
+		</magicLevel>
 		<effects>
 				<effect name="TriggerSkillByMagicType">
 					<magicTypes>0;1</magicTypes>
@@ -2205,49 +2243,92 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="47455" toLevel="4" name="Magic Circle Lv. 1">
+	<skill id="47455" toLevel="5" name="Magic Circle Lv. 1">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
-		<effectPoint>-140</effectPoint>
+		<abnormalTime>300</abnormalTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalType>MAGIC_CIRCLE</abnormalType>
 		<isMagic>5</isMagic>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<isDebuff>true</isDebuff>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">5</value>
 		</abnormalLevel>
-	<!--	<effects>
-			<effect name="CallSkill">
-				<skillId>47457</skillId>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallSkill" fromLevel="5" toLevel="5">
+				<skillId>47456</skillId> <!-- Cancel -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</effects> -->
+			<effect name="TriggerSkillBySkillAttack" fromLevel="5" toLevel="5">
+				<attackSkillId>1230</attackSkillId> <!-- Prominence -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>47457</skillId> <!-- Magic Circle Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack" fromLevel="5" toLevel="5">
+				<attackSkillId>1148</attackSkillId> <!-- Death Spike -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>47457</skillId> <!-- Magic Circle Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack" fromLevel="5" toLevel="5">
+				<attackSkillId>1235</attackSkillId> <!-- Hydro Blast -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>47457</skillId> <!-- Magic Circle Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack" fromLevel="5" toLevel="5">
+				<attackSkillId>1239</attackSkillId> <!-- Hurricane -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<skillId>47457</skillId> <!-- Magic Circle Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47456" toLevel="2" name="Magic Circle Cancel">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="DispelBySlotMyself">
+				<dispel>MAGIC_CIRCLE</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47457" toLevel="1" name="Magic Circle Attack">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<conditions>
-			<condition name="OpAffectedBySkillSkillCondition">
-				<skillId>47455</skillId>
-				<skillLevel>4</skillLevel>
-			</condition>
-		</conditions>
+		<basicProperty>MAGIC</basicProperty>
+		<isMagic>1</isMagic>
+		<effectPoint>-210</effectPoint>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<staticReuse>true</staticReuse>
+		<reuseDelay>10000</reuseDelay>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>150</power>
+				<power>50</power>
 			</effect>
 		</effects>
-
 	</skill>
 	<skill id="47458" toLevel="4" name="Magic Circle Lv. 1">
 		<icon>icon.skill0000</icon>
@@ -2556,7 +2637,7 @@
 				</armorType>
 			</effect>
 						<effect name="MagicalAttackSpeed">
-				<amount>55</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 				<armorType>
 					<item>MAGIC</item>
