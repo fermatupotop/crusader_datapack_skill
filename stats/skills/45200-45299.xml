@@ -317,6 +317,13 @@
 	<skill id="45203" toLevel="1" name="Master of Aggression">
 		<icon>icon.s_master_of_hate</icon>
 		<operateType>P</operateType>
+		<magicLevel>78</magicLevel>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>28</existingSkillId> <!-- Aggression -->
+				<replacementSkillId>45244</replacementSkillId> <!-- Deadly Aggression -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45204" toLevel="45" name="Transcendent Triple Sonic Slash">
 		<!-- Uses dual swords to attack the target with $s1 power. Increases power upon consuming Momentum. Ignores defense. Critical. The skill can be used only in the transcendent instance zones. -->
@@ -4302,6 +4309,13 @@
 	<skill id="45226" toLevel="1" name="Master of Aggression">
 		<icon>icon.s_master_of_hate</icon>
 		<operateType>P</operateType>
+		<magicLevel>78</magicLevel>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>28</existingSkillId> <!-- Aggression -->
+				<replacementSkillId>45260</replacementSkillId> <!-- Force Aggression -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45227" toLevel="12" name="Transcendent Soul Impulse">
 		<!-- <Ultimate skill> Hits the ground and attacks enemies at the distance. Attacks the enemy with $s1 power. Critical. Ignores Shield Defense. Ignores $s2 of the target's defense. Can be used only in the transcendent instance zones. -->
@@ -4946,200 +4960,33 @@
 			</effect>
 		</effects>
 	</skill>
-	
 	<skill id="45232" toLevel="1" name="Power of Aggression">
-		<icon>icon.s_master_of_hate</icon>
-		<abnormalTime>20</abnormalTime>
-		<effectRange>900</effectRange>
-		<isMagic>5</isMagic> <!-- Magic Skill -->
-		<isTriggeredSkill>true</isTriggeredSkill>
+		<icon>icon.s_fatal_hate_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalTime>3</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DefenceCriticalRate">
-				<amount>-5</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="Speed">
 				<amount>8</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-
 	<skill id="45233" toLevel="1" name="Power of Aggression">
-		<icon>icon.s_master_of_hate</icon>
-		<abnormalTime>20</abnormalTime>
-		<effectRange>900</effectRange>
-		<isMagic>5</isMagic> <!-- Magic Skill -->
-		<isTriggeredSkill>true</isTriggeredSkill>
+		<icon>icon.s_force_hate_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalTime>3</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DefenceCriticalRate">
+			<effect name="DefencePhysicalSkillCriticalDamage">
 				<amount>-8</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
 				<amount>5</amount>
 				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	
-
-	<skill id="45233" toLevel="15" name="Transcendent Bleed">
-		<!-- Throws a dagger to hit the enemy with $s1 power. For $s2, Speed -$s3, inflicts Bleed. Requires a dagger. The skill can be used only in the transcendent instance zones. -->
-		<icon>icon.skill19309</icon>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>300</affectRange>
-		<abnormalLevel>
-			<value level="1">3</value>
-			<value level="2">4</value>
-			<value level="3">5</value>
-			<value level="4">6</value>
-			<value level="5">7</value>
-			<value level="6">8</value>
-			<value level="7">9</value>
-			<value level="8">10</value>
-			<value level="9">11</value>
-			<value level="10">12</value>
-			<value level="11">13</value>
-			<value level="12">14</value>
-			<value level="13">15</value>
-			<value level="14">16</value>
-			<value level="15">17</value>
-		</abnormalLevel>
-		<abnormalTime>20</abnormalTime>
-		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<abnormalType>BLEEDING</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>100</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>40</castRange>
-		<coolTime>720</coolTime>
-		<effectPoint>
-			<value level="1">-140</value>
-			<value level="2">-180</value>
-			<value level="3">-265</value>
-			<value level="4">-310</value>
-			<value level="5">-350</value>
-			<value level="6">-370</value>
-			<value level="7">-400</value>
-			<value level="8">-405</value>
-			<value level="9">-410</value>
-			<value level="10">-415</value>
-			<value level="11">-420</value>
-			<value level="12">-425</value>
-			<value level="13">-430</value>
-			<value level="14">-435</value>
-			<value level="15">-440</value>
-		</effectPoint>
-		<effectRange>400</effectRange>
-		<hitTime>780</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
-		<magicLevel>
-			<value level="1">24</value>
-			<value level="2">32</value>
-			<value level="3">49</value>
-			<value level="4">58</value>
-			<value level="5">66</value>
-			<value level="6">70</value>
-			<value level="7">76</value>
-			<value level="8">77</value>
-			<value level="9">78</value>
-			<value level="10">79</value>
-			<value level="11">80</value>
-			<value level="12">81</value>
-			<value level="13">82</value>
-			<value level="14">83</value>
-			<value level="15">84</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">20</value>
-			<value level="2">26</value>
-			<value level="3">39</value>
-			<value level="4">46</value>
-			<value level="5">52</value>
-			<value level="6">55</value>
-			<value level="7">59</value>
-			<value level="8">60</value>
-			<value level="9">61</value>
-			<value level="10">62</value>
-			<value level="11">62</value>
-			<value level="12">63</value>
-			<value level="13">64</value>
-			<value level="14">65</value>
-			<value level="15">65</value>
-		</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>INFECTION</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">289</value>
-					<value level="2">372</value>
-					<value level="3">1266</value>
-					<value level="4">1685</value>
-					<value level="5">2068</value>
-					<value level="6">2264</value>
-					<value level="7">2427</value>
-					<value level="8">2465</value>
-					<value level="9">2504</value>
-					<value level="10">2543</value>
-					<value level="11">2581</value>
-					<value level="12">2620</value>
-					<value level="13">2659</value>
-					<value level="14">2698</value>
-					<value level="15">2737</value>
-				</power>
-			</effect>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">25</value>
-					<value level="2">34</value>
-					<value level="3">44</value>
-					<value level="4">54</value>
-					<value level="5">62</value>
-					<value level="6">67</value>
-					<value level="7">72</value>
-					<value level="8">77</value>
-					<value level="9">82</value>
-					<value level="10">87</value>
-					<value level="11">92</value>
-					<value level="12">97</value>
-					<value level="13">102</value>
-					<value level="14">106</value>
-					<value level="15">110</value>
-				</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="Speed">
-				<amount>-20</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -5747,126 +5594,126 @@
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
-		<castRange>400</castRange>
+		<castRange>
+			<value level="1">400</value>
+			<value level="2">400</value>
+			<value level="3">400</value>
+			<value level="4">400</value>
+			<value level="5">400</value>
+			<value level="6">400</value>
+			<value level="7">400</value>
+			<value level="8">400</value>
+			<value level="9">400</value>
+			<value level="10">400</value>
+			<value level="11">400</value>
+			<value level="12">400</value>
+			<value level="13">600</value>
+			<value level="14">600</value>
+			<value level="15">600</value>
+			<value level="16">600</value>
+			<value level="17">600</value>
+			<value level="18">600</value>
+			<value level="19">600</value>
+			<value level="20">600</value>
+			<value level="21">600</value>
+			<value level="22">600</value>
+			<value level="23">600</value>
+			<value level="24">600</value>
+			<value level="25">600</value>
+			<value level="26">600</value>
+			<value level="27">600</value>
+			<value level="28">600</value>
+			<value level="29">600</value>
+			<value level="30">600</value>
+			<value level="31">600</value>
+			<value level="32">600</value>
+			<value level="33">600</value>
+			<value level="34">700</value>
+			<value level="35">700</value>
+			<value level="36">700</value>
+			<value level="37">700</value>
+			<value level="38">700</value>
+			<value level="39">700</value>
+			<value level="40">700</value>
+			<value level="41">700</value>
+			<value level="42">700</value>
+			<value level="43">700</value>
+			<value level="44">700</value>
+			<value level="45">700</value>
+			<value level="46">700</value>
+			<value level="47">700</value>
+			<value level="48">700</value>
+			<value level="49">700</value>
+			<value level="50">700</value>
+			<value level="51">700</value>
+			<value level="52">700</value>
+			<value level="53">700</value>
+			<value level="54">700</value>
+			<value level="55">700</value>
+			<value level="56">700</value>
+			<value level="57">700</value>
+		</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
-			<value level="1">-3590</value>
-			<value level="2">-3720</value>
-			<value level="3">-3850</value>
-			<value level="4">-4125</value>
-			<value level="5">-4265</value>
-			<value level="6">-4405</value>
-			<value level="7">-4690</value>
-			<value level="8">-4840</value>
-			<value level="9">-4990</value>
-			<value level="10">-5295</value>
-			<value level="11">-5450</value>
-			<value level="12">-5605</value>
-			<value level="13">-5920</value>
-			<value level="14">-6080</value>
-			<value level="15">-6235</value>
-			<value level="16">-6400</value>
-			<value level="17">-6560</value>
-			<value level="18">-6720</value>
-			<value level="19">-6885</value>
-			<value level="20">-7045</value>
-			<value level="21">-7205</value>
-			<value level="22">-7370</value>
-			<value level="23">-7530</value>
-			<value level="24">-7690</value>
-			<value level="25">-7845</value>
-			<value level="26">-8005</value>
-			<value level="27">-8155</value>
-			<value level="28">-8310</value>
-			<value level="29">-8465</value>
-			<value level="30">-8615</value>
-			<value level="31">-8760</value>
-			<value level="32">-8905</value>
-			<value level="33">-9050</value>
-			<value level="34">-9185</value>
-			<value level="35">-9325</value>
-			<value level="36">-9455</value>
-			<value level="37">-9585</value>
-			<value level="38">-9715</value>
-			<value level="39">-9835</value>
-			<value level="40">-9950</value>
-			<value level="41">-10060</value>
-			<value level="42">-10170</value>
-			<value level="43">-10275</value>
-			<value level="44">-10375</value>
-			<value level="45">-10465</value>
-			<value level="46">-10555</value>
-			<value level="47">-10635</value>
-			<value level="48">-10715</value>
-			<value level="49">-10785</value>
-			<value level="50">-10855</value>
-			<value level="51">-10930</value>
-			<value level="52">-11000</value>
-			<value level="53">-11145</value>
-			<value level="54">-11215</value>
-			<value level="55">-12285</value>
-			<value level="56">-13360</value>
-			<value level="57">-14430</value>
+			<value level="1">-7180</value>
+			<value level="2">-7440</value>
+			<value level="3">-7700</value>
+			<value level="4">-8250</value>
+			<value level="5">-8530</value>
+			<value level="6">-8810</value>
+			<value level="7">-9380</value>
+			<value level="8">-9680</value>
+			<value level="9">-9980</value>
+			<value level="10">-10590</value>
+			<value level="11">-10900</value>
+			<value level="12">-11210</value>
+			<value level="13">-11840</value>
+			<value level="14">-12160</value>
+			<value level="15">-12470</value>
+			<value level="16">-12800</value>
+			<value level="17">-13120</value>
+			<value level="18">-13440</value>
+			<value level="19">-13770</value>
+			<value level="20">-14090</value>
+			<value level="21">-14410</value>
+			<value level="22">-14740</value>
+			<value level="23">-15060</value>
+			<value level="24">-15380</value>
+			<value level="25">-15690</value>
+			<value level="26">-16010</value>
+			<value level="27">-16310</value>
+			<value level="28">-16620</value>
+			<value level="29">-16930</value>
+			<value level="30">-17230</value>
+			<value level="31">-17520</value>
+			<value level="32">-17810</value>
+			<value level="33">-18100</value>
+			<value level="34">-18370</value>
+			<value level="35">-18650</value>
+			<value level="36">-18910</value>
+			<value level="37">-19170</value>
+			<value level="38">-19430</value>
+			<value level="39">-19670</value>
+			<value level="40">-19900</value>
+			<value level="41">-20120</value>
+			<value level="42">-20340</value>
+			<value level="43">-20550</value>
+			<value level="44">-20750</value>
+			<value level="45">-20930</value>
+			<value level="46">-21110</value>
+			<value level="47">-21270</value>
+			<value level="48">-21430</value>
+			<value level="49">-21570</value>
+			<value level="50">-21710</value>
+			<value level="51">-21860</value>
+			<value level="52">-22000</value>
+			<value level="53">-22290</value>
+			<value level="54">-22430</value>
+			<value level="55">-22570</value>
+			<value level="56">-22720</value>
+			<value level="57">-22860</value>
 		</effectPoint>
-		<effectRange>
-			<value level="1">900</value>
-			<value level="2">900</value>
-			<value level="3">900</value>
-			<value level="4">900</value>
-			<value level="5">900</value>
-			<value level="6">900</value>
-			<value level="7">900</value>
-			<value level="8">900</value>
-			<value level="9">900</value>
-			<value level="10">900</value>
-			<value level="11">900</value>
-			<value level="12">900</value>
-			<value level="13">1100</value>
-			<value level="14">1100</value>
-			<value level="15">1100</value>
-			<value level="16">1100</value>
-			<value level="17">1100</value>
-			<value level="18">1100</value>
-			<value level="19">1100</value>
-			<value level="20">1100</value>
-			<value level="21">1100</value>
-			<value level="22">1100</value>
-			<value level="23">1100</value>
-			<value level="24">1100</value>
-			<value level="25">1100</value>
-			<value level="26">1100</value>
-			<value level="27">1100</value>
-			<value level="28">1100</value>
-			<value level="29">1100</value>
-			<value level="30">1100</value>
-			<value level="31">1100</value>
-			<value level="32">1100</value>
-			<value level="33">1100</value>
-			<value level="34">1300</value>
-			<value level="35">1300</value>
-			<value level="36">1300</value>
-			<value level="37">1300</value>
-			<value level="38">1300</value>
-			<value level="39">1300</value>
-			<value level="40">1300</value>
-			<value level="41">1300</value>
-			<value level="42">1300</value>
-			<value level="43">1300</value>
-			<value level="44">1300</value>
-			<value level="45">1300</value>
-			<value level="46">1300</value>
-			<value level="47">1300</value>
-			<value level="48">1300</value>
-			<value level="49">1300</value>
-			<value level="50">1300</value>
-			<value level="51">1300</value>
-			<value level="52">1300</value>
-			<value level="53">1400</value>
-			<value level="54">1500</value>
-			<value level="55">1600</value>
-			<value level="56">1700</value>
-			<value level="57">1800</value>
-		</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>700</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLevel>
@@ -5923,29 +5770,29 @@
 			<value level="51">77</value>
 			<value level="52">78</value>
 			<value level="53">80</value>
-			<value level="54">82</value>
-			<value level="55">84</value>
-			<value level="56">86</value>
-			<value level="57">88</value>
+			<value level="54">81</value>
+			<value level="55">82</value>
+			<value level="56">83</value>
+			<value level="57">84</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="TargetMe" />
-			<effect name="GetAgro" />
-			<effect name="TriggerSkillByDamage">
-				<attackerType>Creature</attackerType>
-				<chance>60</chance>
-				<targetType>SELF</targetType>
-				<minDamage>100</minDamage>
+		<selfEffects>
+			<effect name="HealPercent">
+				<power>-5</power>
+			</effect>
+			<effect name="CallSkill">
 				<skillId>45232</skillId> <!-- Power of Aggression -->
 				<skillLevel>1</skillLevel>
 			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
 		</effects>
 	</skill>
 
@@ -7083,133 +6930,132 @@
 		<!-- Removes Courage/ Frenzy effect. -->
 		<operateType>A1</operateType>
 	</skill>
-
-	<skill id="45244" toLevel="57" name="Force Aggression">
+	<skill id="45260" toLevel="57" name="Force Aggression">
 		<!-- <Skill with fixed cooldown> Provokes the enemy into attacking you. Power $s1. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
-		<castRange>400</castRange>
+		<castRange>
+			<value level="1">400</value>
+			<value level="2">400</value>
+			<value level="3">400</value>
+			<value level="4">400</value>
+			<value level="5">400</value>
+			<value level="6">400</value>
+			<value level="7">400</value>
+			<value level="8">400</value>
+			<value level="9">400</value>
+			<value level="10">400</value>
+			<value level="11">400</value>
+			<value level="12">400</value>
+			<value level="13">600</value>
+			<value level="14">600</value>
+			<value level="15">600</value>
+			<value level="16">600</value>
+			<value level="17">600</value>
+			<value level="18">600</value>
+			<value level="19">600</value>
+			<value level="20">600</value>
+			<value level="21">600</value>
+			<value level="22">600</value>
+			<value level="23">600</value>
+			<value level="24">600</value>
+			<value level="25">600</value>
+			<value level="26">600</value>
+			<value level="27">600</value>
+			<value level="28">600</value>
+			<value level="29">600</value>
+			<value level="30">600</value>
+			<value level="31">600</value>
+			<value level="32">600</value>
+			<value level="33">600</value>
+			<value level="34">700</value>
+			<value level="35">700</value>
+			<value level="36">700</value>
+			<value level="37">700</value>
+			<value level="38">700</value>
+			<value level="39">700</value>
+			<value level="40">700</value>
+			<value level="41">700</value>
+			<value level="42">700</value>
+			<value level="43">700</value>
+			<value level="44">700</value>
+			<value level="45">700</value>
+			<value level="46">700</value>
+			<value level="47">700</value>
+			<value level="48">700</value>
+			<value level="49">700</value>
+			<value level="50">700</value>
+			<value level="51">700</value>
+			<value level="52">700</value>
+			<value level="53">700</value>
+			<value level="54">700</value>
+			<value level="55">700</value>
+			<value level="56">700</value>
+			<value level="57">700</value>
+		</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
-			<value level="1">-3590</value>
-			<value level="2">-3720</value>
-			<value level="3">-3850</value>
-			<value level="4">-4125</value>
-			<value level="5">-4265</value>
-			<value level="6">-4405</value>
-			<value level="7">-4690</value>
-			<value level="8">-4840</value>
-			<value level="9">-4990</value>
-			<value level="10">-5295</value>
-			<value level="11">-5450</value>
-			<value level="12">-5605</value>
-			<value level="13">-5920</value>
-			<value level="14">-6080</value>
-			<value level="15">-6235</value>
-			<value level="16">-6400</value>
-			<value level="17">-6560</value>
-			<value level="18">-6720</value>
-			<value level="19">-6885</value>
-			<value level="20">-7045</value>
-			<value level="21">-7205</value>
-			<value level="22">-7370</value>
-			<value level="23">-7530</value>
-			<value level="24">-7690</value>
-			<value level="25">-7845</value>
-			<value level="26">-8005</value>
-			<value level="27">-8155</value>
-			<value level="28">-8310</value>
-			<value level="29">-8465</value>
-			<value level="30">-8615</value>
-			<value level="31">-8760</value>
-			<value level="32">-8905</value>
-			<value level="33">-9050</value>
-			<value level="34">-9185</value>
-			<value level="35">-9325</value>
-			<value level="36">-9455</value>
-			<value level="37">-9585</value>
-			<value level="38">-9715</value>
-			<value level="39">-9835</value>
-			<value level="40">-9950</value>
-			<value level="41">-10060</value>
-			<value level="42">-10170</value>
-			<value level="43">-10275</value>
-			<value level="44">-10375</value>
-			<value level="45">-10465</value>
-			<value level="46">-10555</value>
-			<value level="47">-10635</value>
-			<value level="48">-10715</value>
-			<value level="49">-10785</value>
-			<value level="50">-10855</value>
-			<value level="51">-10930</value>
-			<value level="52">-11000</value>
-			<value level="53">-11145</value>
-			<value level="54">-11215</value>
-			<value level="55">-12285</value>
-			<value level="56">-13360</value>
-			<value level="57">-14430</value>
+			<value level="1">-7180</value>
+			<value level="2">-7440</value>
+			<value level="3">-7700</value>
+			<value level="4">-8250</value>
+			<value level="5">-8530</value>
+			<value level="6">-8810</value>
+			<value level="7">-9380</value>
+			<value level="8">-9680</value>
+			<value level="9">-9980</value>
+			<value level="10">-10590</value>
+			<value level="11">-10900</value>
+			<value level="12">-11210</value>
+			<value level="13">-11840</value>
+			<value level="14">-12160</value>
+			<value level="15">-12470</value>
+			<value level="16">-12800</value>
+			<value level="17">-13120</value>
+			<value level="18">-13440</value>
+			<value level="19">-13770</value>
+			<value level="20">-14090</value>
+			<value level="21">-14410</value>
+			<value level="22">-14740</value>
+			<value level="23">-15060</value>
+			<value level="24">-15380</value>
+			<value level="25">-15690</value>
+			<value level="26">-16010</value>
+			<value level="27">-16310</value>
+			<value level="28">-16620</value>
+			<value level="29">-16930</value>
+			<value level="30">-17230</value>
+			<value level="31">-17520</value>
+			<value level="32">-17810</value>
+			<value level="33">-18100</value>
+			<value level="34">-18370</value>
+			<value level="35">-18650</value>
+			<value level="36">-18910</value>
+			<value level="37">-19170</value>
+			<value level="38">-19430</value>
+			<value level="39">-19670</value>
+			<value level="40">-19900</value>
+			<value level="41">-20120</value>
+			<value level="42">-20340</value>
+			<value level="43">-20550</value>
+			<value level="44">-20750</value>
+			<value level="45">-20930</value>
+			<value level="46">-21110</value>
+			<value level="47">-21270</value>
+			<value level="48">-21430</value>
+			<value level="49">-21570</value>
+			<value level="50">-21710</value>
+			<value level="51">-21860</value>
+			<value level="52">-22000</value>
+			<value level="53">-22290</value>
+			<value level="54">-22430</value>
+			<value level="55">-22570</value>
+			<value level="56">-22720</value>
+			<value level="57">-22860</value>
 		</effectPoint>
-		<effectRange>
-			<value level="1">900</value>
-			<value level="2">900</value>
-			<value level="3">900</value>
-			<value level="4">900</value>
-			<value level="5">900</value>
-			<value level="6">900</value>
-			<value level="7">900</value>
-			<value level="8">900</value>
-			<value level="9">900</value>
-			<value level="10">900</value>
-			<value level="11">900</value>
-			<value level="12">900</value>
-			<value level="13">1100</value>
-			<value level="14">1100</value>
-			<value level="15">1100</value>
-			<value level="16">1100</value>
-			<value level="17">1100</value>
-			<value level="18">1100</value>
-			<value level="19">1100</value>
-			<value level="20">1100</value>
-			<value level="21">1100</value>
-			<value level="22">1100</value>
-			<value level="23">1100</value>
-			<value level="24">1100</value>
-			<value level="25">1100</value>
-			<value level="26">1100</value>
-			<value level="27">1100</value>
-			<value level="28">1100</value>
-			<value level="29">1100</value>
-			<value level="30">1100</value>
-			<value level="31">1100</value>
-			<value level="32">1100</value>
-			<value level="33">1100</value>
-			<value level="34">1300</value>
-			<value level="35">1300</value>
-			<value level="36">1300</value>
-			<value level="37">1300</value>
-			<value level="38">1300</value>
-			<value level="39">1300</value>
-			<value level="40">1300</value>
-			<value level="41">1300</value>
-			<value level="42">1300</value>
-			<value level="43">1300</value>
-			<value level="44">1300</value>
-			<value level="45">1300</value>
-			<value level="46">1300</value>
-			<value level="47">1300</value>
-			<value level="48">1300</value>
-			<value level="49">1300</value>
-			<value level="50">1300</value>
-			<value level="51">1300</value>
-			<value level="52">1300</value>
-			<value level="53">1400</value>
-			<value level="54">1500</value>
-			<value level="55">1600</value>
-			<value level="56">1700</value>
-			<value level="57">1800</value>
-		</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>700</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLevel>
@@ -7266,32 +7112,31 @@
 			<value level="51">77</value>
 			<value level="52">78</value>
 			<value level="53">80</value>
-			<value level="54">82</value>
-			<value level="55">84</value>
-			<value level="56">86</value>
-			<value level="57">88</value>
+			<value level="54">81</value>
+			<value level="55">82</value>
+			<value level="56">83</value>
+			<value level="57">84</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="TargetMe" />
-			<effect name="GetAgro" />
-			<effect name="TriggerSkillByDamage">
-				<attackerType>Creature</attackerType>
-				<chance>60</chance>
-				<targetType>SELF</targetType>
-				<minDamage>100</minDamage>
+		<selfEffects>
+			<effect name="HealPercent">
+				<power>-5</power>
+			</effect>
+			<effect name="CallSkill">
 				<skillId>45233</skillId> <!-- Power of Aggression -->
 				<skillLevel>1</skillLevel>
 			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
 		</effects>
 	</skill>
-
 	<skill id="45261" toLevel="10" name="Transcendent Divine Strike">
 		<!-- Summons holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1031</icon>
