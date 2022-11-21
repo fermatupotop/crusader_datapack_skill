@@ -318,14 +318,14 @@
 		<icon>icon.s_master_of_hate</icon>
 		<operateType>P</operateType>
 	</skill>
-	
-	
-	<skill id="45204" toLevel="40" name="Transcendent Triple Sonic Slash">
+	<skill id="45204" toLevel="45" name="Transcendent Triple Sonic Slash">
 		<!-- Uses dual swords to attack the target with $s1 power. Increases power upon consuming Momentum. Ignores defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0261</icon>
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-245</value>
 			<value level="2">-255</value>
@@ -367,6 +367,11 @@
 			<value level="38">-460</value>
 			<value level="39">-465</value>
 			<value level="40">-470</value>
+			<value level="41">-475</value>
+			<value level="42">-480</value>
+			<value level="43">-485</value>
+			<value level="44">-490</value>
+			<value level="45">-495</value>
 		</effectPoint>
 		<mpConsume>
 			<value level="1">36</value>
@@ -409,14 +414,17 @@
 			<value level="38">69</value>
 			<value level="39">69</value>
 			<value level="40">70</value>
+			<value level="41">72</value>
+			<value level="42">74</value>
+			<value level="43">76</value>
+			<value level="44">78</value>
+			<value level="45">80</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
+		<effectRange>400</effectRange>
 		<coolTime>500</coolTime>
 		<hitTime>1300</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>1</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>1000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -470,7 +478,14 @@
 					<value level="38">5749</value>
 					<value level="39">5821</value>
 					<value level="40">5891</value>
+					<value level="41">6067</value>
+					<value level="42">6249</value>
+					<value level="43">6436</value>
+					<value level="44">6629</value>
+					<value level="45">6827</value>
 				</power>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
 	</skill>

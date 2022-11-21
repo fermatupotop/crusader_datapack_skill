@@ -1005,45 +1005,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="918" toLevel="1" name="Maximum Force Focus">
+	<skill id="918" toLevel="1" name="Maximum Sonic Focus">
 		<!-- Increases Momentum to its maximum level. Available if the charge is below 8th level. -->
 		<icon>icon.skill0918</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
 		<hpConsume>80</hpConsume>
 		<magicLevel>80</magicLevel>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
-			</condition>
-			<condition name="OpEnergyMax">
-				<amount>8</amount>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="FocusMaxMomentum" />
-		</effects>
-	</skill>
-	<skill id="919" toLevel="1" name="Maximum Sonic Focus">
-		<!-- Increases Momentum to its maximum level. Available if the charge is below 8th level. -->
-		<icon>icon.skill0919</icon>
-		<effectPoint>150</effectPoint>
-		<hitTime>900</hitTime>
-		<hpConsume>80</hpConsume>
-		<magicLevel>80</magicLevel>
-		<mpConsume>20</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>75000</reuseDelay>
-		<autoBuffOf>true</autoBuffOf>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1058,6 +1030,33 @@
 		</conditions>
 		<effects>
 			<effect name="FocusMaxMomentum" />
+		</effects>
+	</skill>
+	<skill id="919" toLevel="1" name="Furious Sword Spirit">
+		<!-- Increases Momentum to its maximum level. Available if the charge is below 8th level. -->
+		<icon>icon.skill0919</icon>
+		<effectPoint>150</effectPoint>
+		<hitTime>900</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<hpConsume>80</hpConsume>
+		<magicLevel>80</magicLevel>
+		<mpConsume>20</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>75000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>47934</skillId> <!-- Sword Spirit Lv. 1 -->
+				<skillLevel>5</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="920" toLevel="37" name="Power Crush">
