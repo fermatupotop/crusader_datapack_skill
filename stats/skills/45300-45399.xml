@@ -61,7 +61,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45301" toLevel="20" name="Punishment">
+	<skill id="45301" toLevel="25" name="Punishment">
 		<!-- Inflicts a sword attack. Power $s1. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<castRange>70</castRange>
 		<coolTime>500</coolTime>
@@ -86,6 +86,11 @@
 			<value level="18">-455</value>
 			<value level="19">-465</value>
 			<value level="20">-470</value>
+			<value level="21">-475</value>
+			<value level="22">-480</value>
+			<value level="23">-485</value>
+			<value level="24">-490</value>
+			<value level="25">-495</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
@@ -110,6 +115,11 @@
 			<value level="18">87</value>
 			<value level="19">89</value>
 			<value level="20">90</value>
+			<value level="21">91</value>
+			<value level="22">92</value>
+			<value level="23">93</value>
+			<value level="24">94</value>
+			<value level="25">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
@@ -132,11 +142,16 @@
 			<value level="18">68</value>
 			<value level="19">69</value>
 			<value level="20">70</value>
+			<value level="21">72</value>
+			<value level="22">74</value>
+			<value level="23">76</value>
+			<value level="24">78</value>
+			<value level="25">80</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<reuseDelay>1000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -157,8 +172,8 @@
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.85</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalAttack" fromLevel="6" toLevel="15">
 				<power>
@@ -175,8 +190,8 @@
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalAttack" fromLevel="16" toLevel="20">
 				<power>
@@ -185,11 +200,16 @@
 					<value level="18">6711</value>
 					<value level="19">6879</value>
 					<value level="20">6962</value>
+					<value level="21">7170</value>
+					<value level="22">7385</value>
+					<value level="23">7606</value>
+					<value level="24">7834</value>
+					<value level="25">8069</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.75</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -198,10 +218,10 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="45302" toLevel="20" name="Punishment">
+	<skill id="45302" toLevel="25" name="Punishment">
 		<!-- Inflicts a sword attack. Power $s1. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<castRange>70</castRange>
-		<coolTime>720</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-120</value>
 			<value level="2">-150</value>
@@ -223,9 +243,14 @@
 			<value level="18">-455</value>
 			<value level="19">-465</value>
 			<value level="20">-470</value>
+			<value level="21">-475</value>
+			<value level="22">-480</value>
+			<value level="23">-485</value>
+			<value level="24">-490</value>
+			<value level="25">-495</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>2000</hitTime>
+		<hitTime>1500</hitTime>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">26</value>
@@ -247,6 +272,11 @@
 			<value level="18">87</value>
 			<value level="19">89</value>
 			<value level="20">90</value>
+			<value level="21">91</value>
+			<value level="22">92</value>
+			<value level="23">93</value>
+			<value level="24">94</value>
+			<value level="25">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
@@ -269,11 +299,16 @@
 			<value level="18">68</value>
 			<value level="19">69</value>
 			<value level="20">70</value>
+			<value level="21">72</value>
+			<value level="22">74</value>
+			<value level="23">76</value>
+			<value level="24">78</value>
+			<value level="25">80</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -294,8 +329,8 @@
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.85</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalAttack" fromLevel="6" toLevel="15">
 				<power>
@@ -312,8 +347,8 @@
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalAttack" fromLevel="16" toLevel="20">
 				<power>
@@ -322,11 +357,16 @@
 					<value level="18">7744</value>
 					<value level="19">7938</value>
 					<value level="20">8034</value>
+					<value level="21">8275</value>
+					<value level="22">8523</value>
+					<value level="23">8778</value>
+					<value level="24">9041</value>
+					<value level="25">9312</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.75</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -335,7 +375,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="45303" toLevel="10" name="Wipeout">
+	<skill id="45303" toLevel="15" name="Wipeout">
 		<!-- Puts all the power into the attack. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<castRange>70</castRange>
 		<coolTime>500</coolTime>
@@ -350,6 +390,11 @@
 			<value level="8">-420</value>
 			<value level="9">-445</value>
 			<value level="10">-470</value>
+			<value level="11">-495</value>
+			<value level="12">-520</value>
+			<value level="13">-545</value>
+			<value level="14">-570</value>
+			<value level="15">-595</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
@@ -364,6 +409,11 @@
 			<value level="8">80</value>
 			<value level="9">85</value>
 			<value level="10">90</value>
+			<value level="11">91</value>
+			<value level="12">92</value>
+			<value level="13">93</value>
+			<value level="14">94</value>
+			<value level="15">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">33</value>
@@ -376,11 +426,16 @@
 			<value level="8">63</value>
 			<value level="9">66</value>
 			<value level="10">70</value>
+			<value level="11">72</value>
+			<value level="12">74</value>
+			<value level="13">76</value>
+			<value level="14">78</value>
+			<value level="15">80</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<reuseDelay>10000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -401,8 +456,8 @@
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalAttack" fromLevel="6" toLevel="10">
 				<power>
@@ -411,14 +466,19 @@
 					<value level="8">7544</value>
 					<value level="9">8056</value>
 					<value level="10">8569</value>
+					<value level="11">8826</value>
+					<value level="12">9090</value>
+					<value level="13">9362</value>
+					<value level="14">9642</value>
+					<value level="15">9931</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.75</pDefMod>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
-				<selfEffects>
+		<selfEffects>
 			<effect name="ModifyDeathPoints">
 				<amount>1</amount>
 			</effect>
@@ -1344,7 +1404,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="45312" toLevel="15" name="Hellfire">
+	<skill id="45312" toLevel="20" name="Hellfire">
 		<!-- <Skill with fixed cooldown> Sticks the sword into the ground and summons a burning flame. The flame burns nearby enemies with $s1 power. The inflicted damage depends on the character's P. Atk. The effect lasts for 10 sec. P. Def. -40% M. Def. -40% Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1362,6 +1422,11 @@
 			<value level="13">13</value>
 			<value level="14">14</value>
 			<value level="15">15</value>
+			<value level="16">16</value>
+			<value level="17">17</value>
+			<value level="18">18</value>
+			<value level="19">19</value>
+			<value level="20">20</value>
 		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
@@ -1385,11 +1450,14 @@
 			<value level="13">-1760</value>
 			<value level="14">-1780</value>
 			<value level="15">-1800</value>
+			<value level="16">-1820</value>
+			<value level="17">-1840</value>
+			<value level="18">-1860</value>
+			<value level="19">-1880</value>
+			<value level="20">-1900</value>
 		</effectPoint>
 		<coolTime>500</coolTime>
-		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>0</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1409,10 +1477,14 @@
 			<value level="13">88</value>
 			<value level="14">89</value>
 			<value level="15">90</value>
+			<value level="16">91</value>
+			<value level="17">92</value>
+			<value level="18">93</value>
+			<value level="19">94</value>
+			<value level="20">95</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1449,10 +1521,14 @@
 					<value level="13">5018</value>
 					<value level="14">5080</value>
 					<value level="15">5142</value>
+					<value level="16">5296</value>
+					<value level="17">5454</value>
+					<value level="18">5617</value>
+					<value level="19">5785</value>
+					<value level="20">5958</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<overHit>true</overHit>
 				<pDefMod>0.9</pDefMod>
 			</effect>
 			<effect name="PhysicalDefence">

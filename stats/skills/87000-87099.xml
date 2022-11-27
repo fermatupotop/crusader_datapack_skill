@@ -76,6 +76,7 @@
                 <allowWeapons>ALL</allowWeapons>
                 <skillId>87003</skillId> <!-- Crusader's Blue Energy -->
                 <skillLevel>1</skillLevel>
+                <allowSkillAttack>true</allowSkillAttack>
             </effect>
             <effect name="TriggerSkillByAttack">
                 <attackerType>Creature</attackerType>
@@ -822,7 +823,30 @@
     <skill id="87016" toLevel="1" name="Power of Intelligence">
         <!-- Increases P. Atk. according to INT. <INT 65 - 77> P. Atk. +200 <INT 78 - 90> P. Atk. +1000 <INT 91+> P. Atk. +3000 -->
         <icon>icon.skill0000</icon>
-        <operateType>A1</operateType>
+        <magicLevel>76</magicLevel>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="StatAddForStat">
+                <stat>STAT_INT</stat>
+                <min>65</min>
+                <max>77</max>
+                <addStat>PHYSICAL_ATTACK</addStat>
+                <amount>200</amount>
+            </effect>
+            <effect name="StatAddForStat">
+                <stat>STAT_INT</stat>
+                <min>78</min>
+                <max>90</max>
+                <addStat>PHYSICAL_ATTACK</addStat>
+                <amount>1000</amount>
+            </effect>
+            <effect name="StatAddForStat">
+                <stat>STAT_INT</stat>
+                <min>91</min>
+                <addStat>PHYSICAL_ATTACK</addStat>
+                <amount>3000</amount>
+            </effect>
+        </effects>
     </skill>
     <skill id="87017" toLevel="14" name="Enchanter's Armor Mastery">
         <!-- <Main effect> P. Def. $s9 P. Atk. $s1 <Heavy armor effect> P. Def. $s2 P. Atk. $s10 Atk. Spd. $s3 Casting Spd. $s3 <Robe effect> Received P. Skill Critical Damage $s5 M. Atk. $s11 Max HP $s4 <Light armor effect> P. Def. $s6 P. Atk. $s12 Atk. Spd. $s7 Casting Spd. $s7 Max MP $s8 -->
