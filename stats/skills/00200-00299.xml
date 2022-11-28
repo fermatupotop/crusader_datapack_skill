@@ -6263,12 +6263,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="284" toLevel="60" name="Hurricane Assault">
+	<skill id="284" toLevel="65" name="Hurricane Assault">
 		<!-- Attacks the enemy with $s1 power. Increases power upon consuming Momentum. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0284</icon>
 		<basicProperty>PHYSICAL</basicProperty>
 		<isMagic>0</isMagic>
-		<castRange>40</castRange>
+		<castRange>120</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-175</value>
@@ -6331,6 +6331,11 @@
 			<value level="58">-460</value>
 			<value level="59">-465</value>
 			<value level="60">-470</value>
+			<value level="61">-475</value>
+			<value level="62">-480</value>
+			<value level="63">-485</value>
+			<value level="64">-490</value>
+			<value level="65">-495</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1300</hitTime>
@@ -6395,6 +6400,11 @@
 			<value level="58">88</value>
 			<value level="59">89</value>
 			<value level="60">90</value>
+			<value level="61">91</value>
+			<value level="62">92</value>
+			<value level="63">93</value>
+			<value level="64">94</value>
+			<value level="65">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">26</value>
@@ -6457,16 +6467,20 @@
 			<value level="58">69</value>
 			<value level="59">69</value>
 			<value level="60">70</value>
+			<value level="61">72</value>
+			<value level="62">74</value>
+			<value level="63">76</value>
+			<value level="64">78</value>
+			<value level="65">80</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
+					<item>FIST</item>
 					<item>DUALFIST</item>
 				</weaponType>
 			</condition>
@@ -6535,6 +6549,11 @@
 					<value level="58">5488</value>
 					<value level="59">5556</value>
 					<value level="60">5623</value>
+					<value level="61">5791</value>
+					<value level="62">5964</value>
+					<value level="63">6142</value>
+					<value level="64">6326</value>
+					<value level="65">6515</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>

@@ -850,10 +850,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45423" toLevel="6" name="Burning Strike">
+	<skill id="45423" toLevel="10" name="Burning Strike">
 		<!-- Attacks the enemy with $s1 power. Increases power upon consuming Momentum. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.burning_strike</icon>
-		<castRange>40</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<castRange>120</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-180</value>
@@ -862,6 +864,10 @@
 			<value level="4">-186</value>
 			<value level="5">-188</value>
 			<value level="6">-190</value>
+			<value level="7">-200</value>
+			<value level="8">-205</value>
+			<value level="9">-210</value>
+			<value level="10">-215</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
@@ -872,6 +878,10 @@
 			<value level="4">86</value>
 			<value level="5">88</value>
 			<value level="6">90</value>
+			<value level="7">92</value>
+			<value level="8">93</value>
+			<value level="9">94</value>
+			<value level="10">95</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">64</value>
@@ -880,11 +890,13 @@
 			<value level="4">69</value>
 			<value level="5">70</value>
 			<value level="6">72</value>
+			<value level="7">74</value>
+			<value level="8">76</value>
+			<value level="9">78</value>
+			<value level="10">80</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -904,6 +916,10 @@
 					<value level="4">5888</value>
 					<value level="5">6036</value>
 					<value level="6">6185</value>
+					<value level="7">6561</value>
+					<value level="8">6757</value>
+					<value level="9">6959</value>
+					<value level="10">7167</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.85</pDefMod>
@@ -1488,19 +1504,50 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45453" toLevel="1" name="Flame Burst">
+	<skill id="45453" toLevel="10" name="Flame Burst">
 		<!-- <Infection skill> Deals magic damage with $s1 power.For $s2, drains enemies' HP/ MP. The amount of drained HP depends on the character's M. Atk. -->
 		<icon>icon.flame_blast</icon>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>200</affectRange>
-		<effectPoint>-400</effectPoint>
-		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>250</affectRange>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>80</magicLevel>
-		<mpConsume>68</mpConsume>
-		<mpInitialConsume>29</mpInitialConsume>
+		<basicProperty>MAGIC</basicProperty>
+		<magicLevel>
+			<value level="1">80</value>
+			<value level="2">82</value>
+			<value level="3">85</value>
+			<value level="4">88</value>
+			<value level="5">90</value>
+			<value level="6">91</value>
+			<value level="7">92</value>
+			<value level="8">93</value>
+			<value level="9">94</value>
+			<value level="10">95</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">97</value>
+			<value level="2">103</value>
+			<value level="3">112</value>
+			<value level="4">121</value>
+			<value level="5">125</value>
+			<value level="6">128</value>
+			<value level="7">131</value>
+			<value level="8">134</value>
+			<value level="9">137</value>
+			<value level="10">140</value>
+		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1509,14 +1556,23 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>155</power>
+				<power>
+					<value level="1">155</value>
+					<value level="2">159</value>
+					<value level="3">166</value>
+					<value level="4">176</value>
+					<value level="5">182</value>
+					<value level="6">186</value>
+					<value level="7">189</value>
+					<value level="8">192</value>
+					<value level="9">195</value>
+					<value level="10">199</value>
+				</power>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>45454</skillId> <!-- Flame Burst -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-				</skillLevel>
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>2</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>
@@ -1527,31 +1583,31 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>H_R_FIRE_DEBUFF_AVE</abnormalVisualEffect>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
-		<effectPoint>-140</effectPoint>
-		<effectRange>1100</effectRange>
-		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<effectPoint>-140</effectPoint>	 
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<trait>INFECTION</trait>
-		<magicCriticalRate>5</magicCriticalRate>
+		<trait>INFECTION</trait>				  
 		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ManaDamOverTime">
-				<power>150</power>
-				<ticks>3</ticks>
+				<power>
+					<value level="1">20</value>
+					<value level="2">30</value>
+				</power>
+				<ticks>2</ticks>
 			</effect>
 			<effect name="DamOverTime">
-				<power>150</power>
-				<ticks>3</ticks>
+				<power>
+					<value level="1">80</value>
+					<value level="2">100</value>
+				</power>
+				<ticks>2</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -1650,78 +1706,122 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45458" toLevel="1" name="Blood Bond">
+	<skill id="45458" toLevel="10" name="Blood Bond">
 		<!-- <Drain skill> Attacks enemies with magic. Power $s1. Inflicts the Curse Blood debuff. Makes an additional attack if Curse Blood is applied $s2. Absorbs $s3 of the damage as HP. -->
 		<icon>icon.blood_link</icon>
 		<castRange>700</castRange>
-		<affectLimit>9-10</affectLimit>
-		<affectRange>200</affectRange>
-		<effectPoint>-480</effectPoint>
-		<effectRange>1400</effectRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>250</affectRange>
+		<effectPoint>
+			<value level="1">-480</value>
+			<value level="2">-485</value>
+			<value level="3">-490</value>
+			<value level="4">-495</value>
+			<value level="5">-500</value>
+			<value level="6">-505</value>
+			<value level="7">-510</value>
+			<value level="8">-515</value>
+			<value level="9">-520</value>
+			<value level="10">-525</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>80</magicLevel>
-		<mpConsume>97</mpConsume>
-		<mpInitialConsume>5</mpInitialConsume>
+		<magicLevel>
+			<value level="1">80</value>
+			<value level="2">82</value>
+			<value level="3">85</value>
+			<value level="4">88</value>
+			<value level="5">90</value>
+			<value level="6">91</value>
+			<value level="7">92</value>
+			<value level="8">93</value>
+			<value level="9">94</value>
+			<value level="10">95</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">97</value>
+			<value level="2">103</value>
+			<value level="3">112</value>
+			<value level="4">121</value>
+			<value level="5">125</value>
+			<value level="6">128</value>
+			<value level="7">131</value>
+			<value level="8">134</value>
+			<value level="9">137</value>
+			<value level="10">140</value>
+		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="MagicalAttackRange">
-				<power>90</power>
-			</effect>
-		</effects>
 		<pveEffects>
 			<effect name="CallSkill">
-				<skillId>45459</skillId> <!-- Curse Blood -->
-				<skillLevel>3</skillLevel>
+				<skillId>45459</skillId> <!-- Blood Curse -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</pveEffects>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">126</value>
+					<value level="2">129</value>
+					<value level="3">135</value>
+					<value level="4">143</value>
+					<value level="5">148</value>
+					<value level="6">151</value>
+					<value level="7">153</value>
+					<value level="8">156</value>
+					<value level="9">159</value>
+					<value level="10">162</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45459" toLevel="3" name="Blood Curse">
 		<!-- An effect from the Blood Chain skill. If applied $s1, the target gets additional damage. -->
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<icon>icon.blood_link1</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 		</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>ORC_BLOOD</abnormalType>
 		<abnormalVisualEffect>H_R_BLOOD_LINKB_AVE</abnormalVisualEffect>
-		<basicProperty>NONE</basicProperty>
-		<effectRange>1100</effectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>81</magicLevel>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<endEffects>
-			<effect name="CallSkill">
-				<skillId>45460</skillId> <!-- Blood Burst -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">50</value>
-					<value level="2">58</value>
-					<value level="3">63</value>
-				</power>
-				<ticks>5</ticks>
+			<effect name="CallSkill" fromLevel="3" toLevel="3">
+				<skillId>45460</skillId> <!-- Blood Burst -->
+				<skillLevel>5</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45460" toLevel="1" name="Blood Burst">
+	<skill id="45460" toLevel="10" name="Blood Burst">
 		<icon>icon.blood_link1</icon>
-		<effectPoint>-138</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectPoint>
+			<value level="1">-138</value>
+			<value level="2">-143</value>
+			<value level="3">-148</value>
+			<value level="4">-153</value>
+			<value level="5">-158</value>
+			<value level="6">-163</value>
+			<value level="7">-168</value>
+			<value level="8">-173</value>
+			<value level="9">-178</value>
+			<value level="10">-183</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1731,15 +1831,12 @@
 			<condition name="OpCheckAbnormal">
 				<type>ORC_BLOOD</type>
 				<level>3</level>
-				<hasAbnormal>false</hasAbnormal>
+				<hasAbnormal>true</hasAbnormal>
 			</condition>
-		</conditions>
+		</conditions>	
 		<effects>
-			<effect name="MagicalAttack">
-				<power>90</power>
-			</effect>
 			<effect name="HpDrain">
-				<power>90</power>
+				<power>148</power>
 				<percentage>80</percentage>
 			</effect>
 		</effects>
