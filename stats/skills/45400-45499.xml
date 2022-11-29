@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="45400" toLevel="3" name="Wild Beat">
+	<skill id="45400" toLevel="2" name="Wild Beat">
 		<!-- <Paralyzing Skill> Elven mesmerizing music. The effect lasts for $s1 The enemy is unable to move. Forces the target to move to you. -->
 		<icon>icon.madness_beat</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -63,7 +63,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45402" toLevel="5" name="Frantic Pace">
+	<skill id="45402" toLevel="10" name="Frantic Pace">
 		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power $s2. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
 		<icon>icon.extreme_tempo</icon>
 		<castRange>40</castRange>
@@ -73,21 +73,42 @@
 			<value level="3">-450</value>
 			<value level="4">-460</value>
 			<value level="5">-470</value>
+			<value level="6">-475</value>
+			<value level="7">-480</value>
+			<value level="8">-485</value>
+			<value level="9">-490</value>
+			<value level="10">-495</value>
 		</effectPoint>
-		<magicLevel>80</magicLevel>
+		<magicLevel>
+			<value level="1">82</value>
+			<value level="2">84</value>
+			<value level="3">86</value>
+			<value level="4">88</value>
+			<value level="5">90</value>
+			<value level="6">91</value>
+			<value level="7">92</value>
+			<value level="8">93</value>
+			<value level="9">94</value>
+			<value level="10">95</value>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">64</value>
 			<value level="2">66</value>
 			<value level="3">67</value>
 			<value level="4">69</value>
 			<value level="5">70</value>
+			<value level="6">72</value>
+			<value level="7">74</value>
+			<value level="8">76</value>
+			<value level="9">78</value>
+			<value level="10">80</value>
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<effectRange>400</effectRange>
 		<reuseDelay>1000</reuseDelay>
 		<operateType>A1</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -107,13 +128,21 @@
 					<value level="3">5120</value>
 					<value level="4">5250</value>
 					<value level="5">5380</value>
+					<value level="6">5541</value>
+					<value level="7">5707</value>
+					<value level="8">5878</value>
+					<value level="9">6054</value>
+					<value level="10">6235</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
 				<criticalChance>15</criticalChance>
 				<abnormalType>ROOT_PHYSICALLY;ROOT_MAGICALLY</abnormalType>
-				<damageModifier>1.5</damageModifier>
+				<powerModifier>1.5</powerModifier>
 			</effect>
+			<!-- <effect name="DispelBySlot">
+				<dispel>ROOT_PHYSICALLY,-10;ROOT_MAGICALLY,-10</dispel>
+			</effect> -->
 		</effects>
 	</skill>
 	<skill id="45403" toLevel="5" name="Harmony">
