@@ -1565,39 +1565,28 @@
 		<!-- <Knockback skill> The character is waltzing knocking nearby targets back. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
-		<castRange>600</castRange>
 		<hitTime>1200</hitTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<effectRange>400</effectRange>
 		<activateRate>100</activateRate>
-		<magicLevel>80</magicLevel>
+		<magicLevel>76</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
-		<affectRange>200</affectRange>
-		<affectLimit>10-10</affectLimit>
-		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<affectRange>300</affectRange>
+		<affectLimit>5-12</affectLimit>
 		<isDebuff>true</isDebuff>
-		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<trait>SHOCK</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="KnockBack">
 				<distance>250</distance>
 				<speed>600</speed>
 				<knockDown>false</knockDown>
-			</effect>
-			<effect name="DefenceTrait">
-				<SLEEP>100</SLEEP>
-				<KNOCKBACK>100</KNOCKBACK>
-				<HOLD>100</HOLD>
-				<AIRBIND>100</AIRBIND>
-				<SHOCK>100</SHOCK>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
@@ -2783,30 +2772,24 @@
 	<skill id="47061" toLevel="2" name="Elemental Wind">
 		<!-- <Skill with fixed cooldown> Elemental spirit power greatly increases Speed. Speed +50 -->
 		<icon>icon.elemental_affinity_wind</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>SPEED_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
-		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">85</value>
-			<value level="2">90</value>
+			<value level="1">40</value>
+			<value level="2">76</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">30</value>
 			<value level="2">50</value>
 		</mpConsume>
-		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>100000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2824,11 +2807,22 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>ROOT_PHYSICALLY;ROOT_MAGICALLY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>ROOT_PHYSICALLY;ROOT_MAGICALLY;KNOCKDOWN</slot>
+			</effect>
 			<effect name="DefenceTrait">
 				<HOLD>
 					<value level="1">0</value>
 					<value level="2">100</value>
 				</HOLD>
+				<SUPPRESSION>
+					<value level="1">0</value>
+					<value level="2">100</value>
+				</SUPPRESSION>
 			</effect>
 		</effects>
 	</skill>
